@@ -28,6 +28,26 @@ The web crate is empty on non-wasm targets, so `cargo test --workspace` and clip
 unaffected; `cargo xtask wasm` (part of `cargo xtask ci`) checks it, with `filmcraft-ui-egui`, for
 `wasm32-unknown-unknown`.
 
+Interface language choices are kept in local storage under `filmcraft.interfaceLanguage` and
+restored on refresh, including System Language. Storage failures report a status message and
+editing remains available.
+
+The ordinary `cargo xtask web` command automatically prepares Korean Nanum Gothic Regular
+and the existing Japanese UI fonts in a separate craft-fonts build cache under `target/fonts`.
+It pins the source revisions, checks SHA-256 before embedding, and includes full OFL license and
+copyright notices in the distribution. No `CRAFT_FONTS_DIR` setup is needed. First-time preparation
+needs network access and Git; validated cached inputs work offline. `cargo check` and unit tests
+still work without downloading fonts. An explicit font input is preserved in an overlay, with
+Nanum Gothic added without changing that input's files. Traditional/simplified Chinese support
+keeps its existing optional Chinese-font requirement.
+
+Nanum Gothic is supplied unmodified from Google Fonts commit
+`bd8f81ddb5c74d5c8897b36ad88b440266245103`, with font SHA-256
+`76f45ef4a6bcff344c837c95a7dcc26e017e38b5846d5ae0cdcb5b86be2e2d31`.
+Copyright belongs to NHN Corporation; the font was designed by Sandoll Communications.
+The original license is [OFL-1.1](https://github.com/google/fonts/blob/bd8f81ddb5c74d5c8897b36ad88b440266245103/ofl/nanumgothic/OFL.txt).
+`cargo xtask fonts` prints the prepared input path for existing native packaging scripts.
+
 URL flags: `?empty` (no demo project), `?norecover` (don't reopen the auto-saved project),
 `?fresh` (also don't restore media kept in OPFS), `?cpu` (CPU compositor), `?webgl` (WebGL2 only;
 the page reloads with it when WebGPU is present but fails to start), `?nowebcodecs` (decode with
@@ -142,4 +162,12 @@ no npm packages): load, demo playback, import of a generated MP4, playback, H.26
 cargo xtask web --serve 8765 &
 ffmpeg -f lavfi -i testsrc2=size=640x360:rate=30 -f lavfi -i sine -t 3 -c:v libx264 -pix_fmt yuv420p -c:a aac target/web/dist/web-test.mp4
 node apps/filmcraft-web/tests/smoke.mjs --url http://127.0.0.1:8765/ --media web-test.mp4 --out target/web/smoke
+```
+
+Language regression tests (Node ≥ 22, no npm packages) cover every existing language or its missing-font refusal, Korean
+selection through Settings, reload persistence, system locale precedence, searches, unchanged
+project content and disabled storage. They write screenshots and a JSON report:
+
+```sh
+node apps/filmcraft-web/tests/language.mjs --chrome /usr/bin/chromium --url http://127.0.0.1:8765/ --out target/web/language
 ```

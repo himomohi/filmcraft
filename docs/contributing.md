@@ -72,6 +72,13 @@ browser console instead.
 
 ### Building with craft-fonts
 
+`cargo xtask web` and the normal release packaging scripts now prepare verified fonts automatically,
+including OFL-1.1 Nanum Gothic for Korean. No manual font setup is needed for those commands.
+An explicit `CRAFT_FONTS_DIR` is preserved in a generated overlay. `cargo xtask fonts` prints its
+absolute path. Default sources are pinned, SHA-256-checked and cached under `target/fonts`; their
+license notices ship with the web and native release packages. Ordinary native `cargo run` remains
+compatible with installed system fonts or an optional explicit build input.
+
 Font assets live in [storytold/craft-fonts](https://github.com/storytold/craft-fonts), never in this
 repo ([standard](https://github.com/storytold/craftrules/blob/main/standards/fonts.md)). It is an optional build input, not a Cargo
 dependency:
@@ -83,8 +90,8 @@ CRAFT_FONTS_DIR="$PWD/../craft-fonts" cargo run --release -p filmcraft
 
 Use an absolute path: `build.rs` runs in `crates/text`, so a relative `CRAFT_FONTS_DIR` would
 resolve from there. `crates/text/build.rs` reads its `fonts/manifest.txt` and embeds the fonts as
-`filmcraft_text::fonts::CRAFT_FONTS` (native: all of them; the web build: only BIZ UDPGothic
-Regular, to keep the wasm small). The Japanese ones become the last fallback of every UI font family
+`filmcraft_text::fonts::CRAFT_FONTS` (native: all of them; the web build: BIZ UDPGothic
+Regular, Nanum Gothic Regular and an explicitly supplied Noto Sans CJK SC Regular). The Japanese ones join the fallback stack of every UI font family
 (`crates/ui-egui/src/theme.rs`, BIZ UDPGothic first) and fallback faces in the text engine (Gothic
 for sans text, Mincho for serif text). Without `CRAFT_FONTS_DIR`, `CRAFT_FONTS` is empty and
 FilmCraft uses its bundled and system fonts. A `CRAFT_FONTS_DIR` that is not a checkout is a build

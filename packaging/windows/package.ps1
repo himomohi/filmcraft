@@ -56,6 +56,15 @@ if (-not $env:FILMCRAFT_BUILD_DATE) { $env:FILMCRAFT_BUILD_DATE = (Get-Date).ToU
 Write-Output "FilmCraft $Version for Windows $Arch ($Target)"
 
 if (-not $SkipBuild) {
+  # Use the same verified Korean font input as web and Unix release packaging. The original
+  # CRAFT_FONTS_DIR, when supplied by CI, is retained without editing its files.
+  Push-Location $Root
+  try {
+    $fontInput = & cargo xtask fonts
+    if ($LASTEXITCODE -ne 0) { throw 'preparing verified font inputs failed' }
+    $env:CRAFT_FONTS_DIR = ($fontInput | Select-Object -Last 1).Trim()
+    $env:CRAFT_FONTS_REQUIRED = '1'
+  } finally { Pop-Location }
   # Static CRT: no VC++ redistributable needed. Scoped to the target so host build scripts and
   # proc-macros are unaffected.
   $flagVar = 'CARGO_TARGET_' + ($Target.ToUpper() -replace '-', '_') + '_RUSTFLAGS'
@@ -88,13 +97,26 @@ Remove-Item -Recurse -Force $Stage -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Force -Path $Stage | Out-Null
 Copy-Item (Join-Path $Bin 'filmcraft.exe'), (Join-Path $Bin 'filmcraft-cli.exe') $Stage
 
+# Font binaries are embedded; their original copyright and OFL notices must accompany both
+# the installer and portable distribution. SkipBuild keeps its existing optional input behaviour.
+function Copy-FontNotices([string] $Destination) {
+  if (-not $env:CRAFT_FONTS_DIR) { return }
+  foreach ($kind in 'OFL', 'NOTICE') {
+    foreach ($lic in Get-ChildItem -Path (Join-Path $env:CRAFT_FONTS_DIR "fonts\*\$kind.txt") -ErrorAction SilentlyContinue) {
+      Copy-Item $lic.FullName (Join-Path $Destination "$kind-$($lic.Directory.Name).txt")
+    }
+  }
+}
+Copy-FontNotices $Stage
+$FontLicenses = if (@(Get-ChildItem -Path (Join-Path $Stage '*.txt')).Count -gt 0) { '1' } else { '0' }
+
 & (Join-Path $PSScriptRoot 'sign.ps1') (Join-Path $Stage 'filmcraft.exe') (Join-Path $Stage 'filmcraft-cli.exe')
 
 # ---- MSI ---------------------------------------------------------------------------------------
 $Msi = Join-Path $Dist "filmcraft-$Version-windows-$Arch.msi"
 Invoke-Native 'wix build' {
   wix build (Join-Path $PSScriptRoot 'filmcraft.wxs') -arch $Arch `
-    -d "Version=$MsiVersion" -d "BinDir=$Stage" -d "IconPath=$(Join-Path $Root 'assets\app-icon\filmcraft.ico')" `
+    -d "Version=$MsiVersion" -d "BinDir=$Stage" -d "FontLicenses=$FontLicenses" -d "IconPath=$(Join-Path $Root 'assets\app-icon\filmcraft.ico')" `
     -o $Msi
 }
 # wix writes its debug symbols (.wixpdb) next to the MSI; keep them out of the release assets.
@@ -115,12 +137,7 @@ foreach ($f in 'README.md', 'LICENSE', 'LICENSE-MIT', 'LICENSE-APACHE') {
   $p = Join-Path $Root $f
   if (Test-Path $p) { Copy-Item $p $Portable }
 }
-# Licences of the embedded craft-fonts fonts (builds with CRAFT_FONTS_DIR) as OFL-<family>.txt.
-if ($env:CRAFT_FONTS_DIR) {
-  foreach ($lic in Get-ChildItem -Path (Join-Path $env:CRAFT_FONTS_DIR 'fonts\*\OFL.txt') -ErrorAction SilentlyContinue) {
-    Copy-Item $lic.FullName (Join-Path $Portable "OFL-$($lic.Directory.Name).txt")
-  }
-}
+Copy-FontNotices $Portable
 $Zip = Join-Path $Dist "filmcraft-$Version-windows-$Arch-portable.zip"
 Remove-Item -Force $Zip -ErrorAction SilentlyContinue
 Compress-Archive -Path $Portable -DestinationPath $Zip

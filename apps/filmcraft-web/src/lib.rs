@@ -23,6 +23,7 @@ pub mod audio;
 pub mod download_pacing;
 pub mod fs;
 pub mod import;
+mod language_preference;
 pub mod opfs;
 pub mod recovery;
 pub mod recovery_policy;
@@ -100,6 +101,7 @@ impl eframe::App for WebApp {
             f(self, ctx);
         }
         self.app.logic(ctx, frame);
+        language_preference::save(&mut self.app);
         api::poll_replies();
         // exports advance between frames (no threads)
         if self.app.session.pump_jobs(std::time::Duration::from_millis(30)) {
@@ -169,6 +171,7 @@ pub async fn start(canvas_id: String) -> Result<(), JsValue> {
                 });
                 webcodecs::install();
                 let mut session = Session::new(Arc::new(fs::WebServices));
+                language_preference::load(&mut session);
                 let mut toast = None;
                 if let Some((name, bytes)) = recovered {
                     let path = format!("/recovered/{name}");

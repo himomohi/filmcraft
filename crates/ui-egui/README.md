@@ -18,7 +18,7 @@ the committed span and undo. Set `FILMCRAFT_UI_SNAPSHOT_DIR` to render screensho
 ## Localisation
 
 Edit > Language offers English, Japanese, Spanish, Brazilian Portuguese, Ukrainian, Simplified
-Chinese, German, Russian, French and Indonesian (which covers the whole interface). The language is stored in the engine's `general.interfaceLanguage` preference,
+Chinese, German, Russian, French, Indonesian and Korean (`한국어`). The language is stored in the engine's `general.interfaceLanguage` preference,
 restored on startup, and also available in Settings > General.
 Its default, System Language (`system`), follows the operating system: the first of the user's
 preferred languages that the interface has (the host supplies them through
@@ -26,6 +26,15 @@ preferred languages that the interface has (the host supplies them through
 otherwise English.
 The `app.language.*` UI commands and `prefs.set` reach it through the control channel.
 Japanese requires a craft-fonts build or a suitable installed font.
+`cargo xtask web` automatically prepares and embeds a pinned, SHA-256-verified Nanum Gothic
+Regular face (NHN/NAVER and Sandoll, OFL-1.1). No font checkout or environment variable is needed
+for the Korean web interface. Font bytes remain in the ignored external craft-fonts build cache,
+and the web distribution includes the original license/copyright notices. Native release packaging
+uses the same verified input; ordinary native development builds can also reuse installed Hangul
+faces. An explicit `CRAFT_FONTS_DIR` is preserved in a generated overlay.
+On the web, the language preference is saved in the browser's local storage and restored after
+refresh, including `system`. Disabled or full storage reports a save failure without interrupting
+editing. Native builds continue to use `preferences.json`.
 
 English source strings are lookup keys in `src/i18n/<code>.tsv`. `tl!` translates literals, `tlf!`
 fills translated templates, and `i18n::t` translates names from registries. Placeholder values
@@ -37,6 +46,8 @@ translated label and its English source, including Unicode capitals. Project con
 and preference values retain their original values. Engine errors, CLI and MCP messages remain
 English. Ukrainian and Russian currently cover the core menus, German every menu; they fall back
 to English elsewhere.
+Korean covers the core menus, settings, primary editing panels and common dialogs; specialised
+effect names and other entries not yet in `ko.tsv` fall back to English.
 
 Verification: `cargo test -p filmcraft-ui-egui` checks catalog syntax, duplicate keys, placeholders,
 literal/menu/registry coverage and UI behaviour; `cargo xtask ci` runs the workspace gates. Visual

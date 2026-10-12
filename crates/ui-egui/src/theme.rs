@@ -414,7 +414,7 @@ pub fn font_families() -> Vec<FontFamily> {
     vec![FontFamily::Proportional, FontFamily::Monospace, FontFamily::Name("semibold".into()), FontFamily::Name("medium".into())]
 }
 
-/// Install the Latin UI fonts, Chinese fallback (craft-fonts or an installed face), Japanese
+/// Install the Latin UI fonts, Chinese and Korean fallbacks (craft-fonts or installed faces), Japanese
 /// craft-fonts, Arabic and Hebrew fallbacks (craft-fonts or installed faces, [`crate::rtl`]) and
 /// egui visuals. Document names keep their glyphs in every interface language.
 pub fn install(ctx: &egui::Context, t: &Tokens) {
@@ -636,22 +636,54 @@ mod tests {
     /// Typed, pasted or IME-composed Hangul draws real glyphs, not the missing-glyph box (artcraft#2093).
     #[test]
     fn korean_text_renders_with_an_installed_korean_font() {
-        const KOREAN: &str = "한국어 입력 테스트";
-        filmcraft_text::fonts::scan_system();
-        let available = filmcraft_text::fonts::all_faces().iter().any(|f| f.info.origin == "system" && KOREAN.chars().all(|c| f.has_char(c)));
-        if !available {
-            eprintln!("SKIPPED: no installed Korean font");
+        const KOREAN: &str = "한국어 입력 테스트 파일 편집 저장 설정 타임라인 효과";
+        if !crate::i18n::korean_font_available() {
+            eprintln!("SKIPPED: no Korean font available");
+            return;
+        }
+        let ctx = egui::Context::default();
+        for kind in [ThemeKind::Dark, ThemeKind::Medium, ThemeKind::Light] {
+            install(&ctx, &Tokens::for_kind(kind));
+            ctx.run_ui(egui::RawInput::default(), |_| {}).textures_delta.clear();
+            ctx.fonts_mut(|fonts| {
+                for family in font_families() {
+                    let font = FontId::new(13.0, family);
+                    let missing = fonts.layout_no_wrap("\u{fffd}".into(), font.clone(), Color32::WHITE);
+                    let missing_uv = missing.rows[0].glyphs[0].uv_rect;
+                    let text = fonts.layout_no_wrap(KOREAN.into(), font.clone(), Color32::WHITE);
+                    for glyph in text.rows.iter().flat_map(|r| &r.glyphs).filter(|g| g.chr != ' ') {
+                        assert_ne!(glyph.uv_rect, missing_uv, "missing {} in {font:?} with {kind:?}", glyph.chr);
+                    }
+                }
+            });
+        }
+        ctx.run_ui(egui::RawInput::default(), |_| {}).textures_delta.clear();
+    }
+
+    #[test]
+    fn a_craft_korean_font_covers_the_interface_catalog() {
+        if !crate::cjk::craft_korean_fonts().chain(crate::cjk::craft_fonts()).any(|font| matches!(font.family, "NanumGothic" | "Noto Sans CJK SC")) {
+            eprintln!("SKIPPED: built without the craft-fonts CJK face");
             return;
         }
         let ctx = egui::Context::default();
         install(&ctx, &Tokens::for_kind(ThemeKind::Dark));
         ctx.run_ui(egui::RawInput::default(), |_| {}).textures_delta.clear();
+        let mut chars: Vec<char> = include_str!("i18n/ko.tsv")
+            .lines()
+            .filter_map(|line| line.split('\t').nth(2))
+            .flat_map(str::chars)
+            .filter(|c| ('\u{ac00}'..='\u{d7a3}').contains(c))
+            .collect();
+        chars.sort_unstable();
+        chars.dedup();
+        let sample: String = chars.into_iter().collect();
         ctx.fonts_mut(|fonts| {
             for family in font_families() {
                 let font = FontId::new(13.0, family);
                 let missing = fonts.layout_no_wrap("\u{fffd}".into(), font.clone(), Color32::WHITE);
                 let missing_uv = missing.rows[0].glyphs[0].uv_rect;
-                let text = fonts.layout_no_wrap(KOREAN.into(), font.clone(), Color32::WHITE);
+                let text = fonts.layout_no_wrap(sample.clone(), font.clone(), Color32::WHITE);
                 for glyph in text.rows.iter().flat_map(|r| &r.glyphs).filter(|g| g.chr != ' ') {
                     assert_ne!(glyph.uv_rect, missing_uv, "missing {} in {font:?}", glyph.chr);
                 }
@@ -673,7 +705,8 @@ mod tests {
             let defs = fonts.definitions().clone();
             for (family, stack) in &defs.families {
                 // installed right-to-left faces (Hebrew is not in craft-fonts) come after the craft run
-                let stack: Vec<&String> = stack.iter().filter(|n| !crate::rtl::is_system_face(n)).collect();
+                let stack: Vec<&String> =
+                    stack.iter().filter(|n| !crate::rtl::is_system_face(n) && !matches!(n.as_str(), "system-chinese" | "system-korean")).collect();
                 let first = stack.iter().position(|n| n.starts_with("craft:")).unwrap_or(stack.len());
                 assert!(first > 0 && stack[first..].iter().all(|n| n.starts_with("craft:")), "{family:?}: {stack:?}");
                 let first_japanese = stack.iter().find(|n| n.starts_with("craft:BIZ") || n.starts_with("craft:Shippori"));
@@ -697,7 +730,10 @@ mod tests {
     #[test]
     fn works_without_craft_fonts() {
         let ctx = installed();
-        let n = filmcraft_text::fonts::craft_japanese().count() + crate::cjk::craft_fonts().count() + crate::rtl::craft_fonts().count();
+        let n = filmcraft_text::fonts::craft_japanese().count()
+            + crate::cjk::craft_fonts().count()
+            + crate::cjk::craft_korean_fonts().count()
+            + crate::rtl::craft_fonts().count();
         ctx.fonts_mut(|fonts| {
             let defs = fonts.definitions().clone();
             assert_eq!(defs.font_data.keys().filter(|k| k.starts_with("craft:")).count(), n);

@@ -20,6 +20,9 @@
 //! Simplified Chinese uses the Chinese fallback `theme::install` always adds (craft-fonts Hans/Hant
 //! faces, otherwise one installed system face, see `cjk.rs`); without one, switching to Chinese is
 //! refused the same way ([`chinese_font_available`]).
+//!
+//! Korean uses the theme's Hangul fallback (craft-fonts' Noto CJK face or an installed Korean
+//! face); without one, switching is refused ([`korean_font_available`]).
 
 mod catalog;
 
@@ -46,6 +49,7 @@ pub enum Language {
     Ru,
     Fr,
     Id,
+    Ko,
 }
 
 static JAPANESE: OnceLock<Catalog> = OnceLock::new();
@@ -57,9 +61,10 @@ static GERMAN: OnceLock<Catalog> = OnceLock::new();
 static RUSSIAN: OnceLock<Catalog> = OnceLock::new();
 static FRENCH: OnceLock<Catalog> = OnceLock::new();
 static INDONESIAN: OnceLock<Catalog> = OnceLock::new();
+static KOREAN: OnceLock<Catalog> = OnceLock::new();
 
 impl Language {
-    pub const ALL: [Self; 10] = [Self::En, Self::Ja, Self::Es, Self::PtBr, Self::Uk, Self::ZhCn, Self::De, Self::Ru, Self::Fr, Self::Id];
+    pub const ALL: [Self; 11] = [Self::En, Self::Ja, Self::Es, Self::PtBr, Self::Uk, Self::ZhCn, Self::De, Self::Ru, Self::Fr, Self::Id, Self::Ko];
 
     pub fn name(self) -> &'static str {
         match self {
@@ -73,6 +78,7 @@ impl Language {
             Self::Ru => "Русский",
             Self::Fr => "Français",
             Self::Id => "Bahasa Indonesia",
+            Self::Ko => "한국어",
         }
     }
 
@@ -88,6 +94,7 @@ impl Language {
             "ru" => Some(Self::Ru),
             "fr" => Some(Self::Fr),
             "id" => Some(Self::Id),
+            "ko" => Some(Self::Ko),
             _ => None,
         }
     }
@@ -101,7 +108,7 @@ impl Language {
     /// only for Simplified locales (`zh`, `zh-CN`, `zh-SG`, `zh-Hans…`); Traditional ones (`zh-TW`,
     /// `zh-HK`, `zh-MO`, `zh-Hant…`) are skipped.
     pub fn from_locales(tags: &[String]) -> Self {
-        const PRIMARY: [(&str, Language); 10] = [
+        const PRIMARY: [(&str, Language); 11] = [
             ("en", Language::En),
             ("ja", Language::Ja),
             ("es", Language::Es),
@@ -112,6 +119,7 @@ impl Language {
             ("fr", Language::Fr),
             ("id", Language::Id),
             ("in", Language::Id),
+            ("ko", Language::Ko),
         ];
         tags.iter()
             .find_map(|tag| {
@@ -142,6 +150,7 @@ impl Language {
             Self::Ru => "ru",
             Self::Fr => "fr",
             Self::Id => "id",
+            Self::Ko => "ko",
         }
     }
 
@@ -158,6 +167,7 @@ impl Language {
             Self::Ru => Some(RUSSIAN.get_or_init(|| Catalog::parse(include_str!("ru.tsv")))),
             Self::Fr => Some(FRENCH.get_or_init(|| Catalog::parse(include_str!("fr.tsv")))),
             Self::Id => Some(INDONESIAN.get_or_init(|| Catalog::parse(include_str!("id.tsv")))),
+            Self::Ko => Some(KOREAN.get_or_init(|| Catalog::parse(include_str!("ko.tsv")))),
         }
     }
 
@@ -313,6 +323,11 @@ pub fn chinese_font_available() -> bool {
     crate::cjk::available()
 }
 
+/// The theme installs a Hangul fallback from craft-fonts or an installed system face.
+pub fn korean_font_available() -> bool {
+    crate::cjk::korean_available()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -329,6 +344,7 @@ mod tests {
             ("ru", include_str!("ru.tsv")),
             ("fr", include_str!("fr.tsv")),
             ("id", include_str!("id.tsv")),
+            ("ko", include_str!("ko.tsv")),
         ] {
             let (entries, errors) = catalog::parse_entries(text);
             assert!(errors.is_empty(), "{code}: {errors:?}");
@@ -1146,6 +1162,86 @@ mod tests {
         set_current(Language::En);
     }
 
+    #[test]
+    fn korean_covers_core_menus_settings_and_editor_labels() {
+        let (core, _) = catalog::parse_entries(include_str!("uk.tsv"));
+        for (_, en, _) in core {
+            assert!(Language::Ko.has(&en), "missing Korean menu label: {en}");
+        }
+        for en in core_menu_labels() {
+            assert!(Language::Ko.has(&en), "missing Korean menu label: {en}");
+        }
+        let mut labels = Vec::new();
+        for category in filmcraft_engine::settings::categories() {
+            push(&mut labels, category.title);
+            settings_rows(category.rows, &mut labels);
+        }
+        let missing: Vec<_> = labels.into_iter().filter(|label| !Language::Ko.has(label)).collect();
+        assert!(missing.is_empty(), "missing Korean settings labels: {missing:#?}");
+        assert_eq!(Language::Ko.name(), "한국어");
+        assert_eq!(Language::Ko.tr("Save As…"), "다른 이름으로 저장…");
+        assert_eq!(Language::Ko.tr("Interface Language"), "인터페이스 언어");
+        assert_eq!(Language::Ko.tr("내 영상 {take}.mp4"), "내 영상 {take}.mp4");
+        assert_eq!(Language::Ko.tr("An untranslated label"), "An untranslated label");
+        set_current(Language::Ko);
+        assert!(matches_query("Gaussian Blur", "흐림"));
+        assert!(matches_query("Gaussian Blur", "gaussian"));
+        assert_eq!(fmt(t("Saved preset “{name}”"), &[("name", "내 {name} 프리셋")]), "“내 {name} 프리셋” 프리셋을 저장했습니다");
+        set_current(Language::En);
+    }
+
+    #[test]
+    fn korean_language_switch_restores_preferences_and_preserves_the_document() {
+        let mut app = crate::FilmcraftApp::new(filmcraft_engine::Session::default());
+        let ctx = egui::Context::default();
+        crate::theme::install(&ctx, &app.tokens);
+        crate::menus::invoke(&mut app, &ctx, "app.language.spanish", serde_json::json!({})).unwrap();
+        let before = serde_json::to_value(&app.session.project).unwrap();
+        let result = crate::menus::invoke(&mut app, &ctx, "app.language.korean", serde_json::json!({}));
+        if !korean_font_available() {
+            assert!(result.is_err());
+            assert_eq!(app.ui.language, Language::Es);
+            assert_eq!(app.session.prefs.general.interface_language, "es");
+        } else {
+            assert_eq!(result.unwrap(), serde_json::json!("ko"));
+            assert_eq!((app.ui.language, current()), (Language::Ko, Language::Ko));
+            for item in crate::menus::menu_items(&app).iter().filter(|item| item.id.starts_with("app.language.")) {
+                assert_eq!(item.checked, Some(item.id == "app.language.korean"));
+            }
+            let ui: crate::state::UiState = serde_json::from_value(serde_json::to_value(&app.ui).unwrap()).unwrap();
+            assert_eq!(ui.language, Language::Ko);
+            let mut restarted = filmcraft_engine::Session::default();
+            restarted.prefs = serde_json::from_value(serde_json::to_value(&app.session.prefs).unwrap()).unwrap();
+            let mut restarted = crate::FilmcraftApp::new(restarted);
+            restarted.apply_prefs(&ctx);
+            assert_eq!(restarted.ui.language, Language::Ko);
+            crate::menus::invoke(&mut app, &ctx, "app.language.english", serde_json::json!({})).unwrap();
+            assert_eq!((app.ui.language, current()), (Language::En, Language::En));
+        }
+        assert_eq!(serde_json::to_value(&app.session.project).unwrap(), before);
+        set_current(Language::En);
+    }
+
+    #[test]
+    fn korean_system_locales_and_explicit_preferences() {
+        for tag in ["ko", "ko-KR", "KO-kr", "ko_KR.UTF-8", "ko-Kore-KR", "ko_KR@variant"] {
+            assert_eq!(Language::from_locales(&[tag.into()]), Language::Ko, "{tag}");
+        }
+        assert_eq!(Language::from_locales(&["xx".into(), "ko-KR".into(), "en".into()]), Language::Ko);
+        assert_eq!(Language::from_locales(&["es".into(), "ko-KR".into()]), Language::Es);
+        assert_eq!(Language::parse("ko"), Some(Language::Ko));
+        assert_eq!(Language::parse("ko-KR"), None);
+        let mut app = crate::FilmcraftApp::new(filmcraft_engine::Session::default());
+        app.hooks.system_languages = Some(Box::new(|| vec!["ko-KR".into(), "en-US".into()]));
+        let ctx = egui::Context::default();
+        app.apply_prefs(&ctx);
+        assert_eq!(app.ui.language, if korean_font_available() { Language::Ko } else { Language::En });
+        app.session.execute("prefs.set", serde_json::json!({"key": "general.interfaceLanguage", "value": "es"})).unwrap();
+        app.apply_prefs(&ctx);
+        assert_eq!(app.ui.language, Language::Es, "an explicit choice wins over the system locale");
+        set_current(Language::En);
+    }
+
     /// Every non-ASCII character of `text` renders with the bundled interface fonts, in every family.
     fn assert_bundled_fonts_cover(text: impl Iterator<Item = char>) {
         let ctx = egui::Context::default();
@@ -1230,7 +1326,13 @@ mod tests {
             for family in crate::theme::font_families() {
                 let stack = fonts.definitions().families.get(&family).cloned().unwrap_or_default();
                 if craft {
-                    assert!(stack.last().is_some_and(|n| n.starts_with("craft:")), "{family:?}: {stack:?}");
+                    // Chinese and right-to-left fallbacks may follow the Japanese craft faces.
+                    // Check that this family contains a Japanese build-input face, rather than
+                    // assuming that the last face in its entire stack must be Japanese.
+                    assert!(
+                        filmcraft_text::fonts::craft_japanese().any(|f| stack.contains(&format!("craft:{} {}", f.family, f.style))),
+                        "{family:?}: {stack:?}"
+                    );
                     assert!(!stack.iter().any(|n| n == JAPANESE_FONT), "{family:?}: {stack:?}");
                 } else {
                     assert_eq!(stack.last().map(String::as_str), Some(JAPANESE_FONT), "{family:?}: {stack:?}");

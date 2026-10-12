@@ -39,6 +39,14 @@ export FILMCRAFT_BUILD_SHA
 export FILMCRAFT_BUILD_DATE="${FILMCRAFT_BUILD_DATE:-$(date -u +%Y-%m-%d)}"
 export CARGO_TARGET_DIR="${CARGO_TARGET_DIR:-$ROOT/target}"
 
+# Every normal release build receives the verified Korean face, including CI whose optional
+# craft-fonts pin predates Korean fonts. Explicit font inputs are preserved in an overlay.
+# --skip-build continues to package already-built outputs without downloading build inputs.
+if [ "${1:-}" != "--skip-build" ]; then
+  CRAFT_FONTS_DIR="$(cd "$ROOT" && cargo xtask fonts)" || return 1
+  export CRAFT_FONTS_DIR CRAFT_FONTS_REQUIRED=1
+fi
+
 # Emit a GitHub Actions warning (plain stderr outside Actions).
 warn() {
   if [ -n "${GITHUB_ACTIONS:-}" ]; then echo "::warning::$*"; else echo "warning: $*" >&2; fi
@@ -63,6 +71,11 @@ copy_font_licences() {
     [ -f "$lic" ] || continue
     family="$(basename "$(dirname "$lic")")"
     cp "$lic" "$dest/OFL-$family.txt"
+  done
+  for lic in "$CRAFT_FONTS_DIR"/fonts/*/NOTICE.txt; do
+    [ -f "$lic" ] || continue
+    family="$(basename "$(dirname "$lic")")"
+    cp "$lic" "$dest/NOTICE-$family.txt"
   done
 }
 

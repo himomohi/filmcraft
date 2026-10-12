@@ -8,3 +8,5 @@ publish = false
 [dependencies]
 serde_json = { workspace = true }
 filmcraft-testkit = { workspace = true }
+sha2 = "=0.10.9"
+ureq = { version = "=3.4.2", features = ["platform-verifier"] }

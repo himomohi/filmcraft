@@ -2,7 +2,7 @@
 <!--
   FilmCraft MSI (WiX Toolset v5: `dotnet tool install -g wix`). Built by package.ps1:
 
-    wix build filmcraft.wxs -arch x64 -d Version=1.2.3 -d BinDir=... -d IconPath=... -o out.msi
+    wix build filmcraft.wxs -arch x64 -d Version=1.2.3 -d BinDir=... -d FontLicenses=1 -d IconPath=... -o out.msi
 
   Per-machine install into Program Files and a Start Menu shortcut. No file associations.
 -->
@@ -53,6 +53,10 @@
       <Component Id="FilmcraftCli">
         <File Id="FilmcraftCliExe" Source="$(var.BinDir)\filmcraft-cli.exe" KeyPath="yes" />
       </Component>
+      <?if $(var.FontLicenses) = 1 ?>
+      <!-- WiX v5 harvesting includes the embedded fonts' notices in the MSI as well as ZIP. -->
+      <Files Include="$(var.BinDir)\*.txt" />
+      <?endif?>
     </ComponentGroup>
   </Fragment>
 </Wix>

@@ -18,6 +18,7 @@
 //! - `ico <out.ico> <in.png>…`: pack PNGs into a Windows `.ico` (used by `packaging/icons.sh`).
 //! - `ci`: fmt check, clippy -D warnings, tests, layers, assets, wasm.
 
+mod fonts;
 mod ico;
 mod parity;
 mod version;
@@ -288,6 +289,8 @@ fn web(args: &[String]) -> Result<(), String> {
     let serve = args.iter().position(|a| a == "--serve").map(|i| args.get(i + 1).and_then(|p| p.parse::<u16>().ok()).unwrap_or(8765));
     let profile = if dev { "dev" } else { "release" };
     let mut build = Command::new(env!("CARGO"));
+    let fonts = fonts::prepare(&target_dir(), std::env::var_os("CRAFT_FONTS_DIR").as_deref())?;
+    build.env("CRAFT_FONTS_DIR", &fonts).env("CRAFT_FONTS_REQUIRED", "1");
     build.args(["build", "--target", "wasm32-unknown-unknown", "-p", "filmcraft-web", "--profile", profile]);
     run(&mut build)?;
     let out = Command::new("wasm-bindgen")
@@ -339,6 +342,7 @@ fn web(args: &[String]) -> Result<(), String> {
             std::fs::copy(e.path(), dist.join(&name)).map_err(|e| format!("{name}: {e}"))?;
         }
     }
+    fonts::copy_licenses(&fonts, &dist)?;
     let size = |p: &std::path::Path| std::fs::metadata(p).map(|m| m.len()).unwrap_or(0);
     let total: u64 = std::fs::read_dir(&dist).map_err(|e| e.to_string())?.flatten().map(|e| size(&e.path())).sum();
     println!("web: {} ({:.1} MB wasm, {:.1} MB total)", dist.display(), size(&bg) as f64 / 1e6, total as f64 / 1e6);
@@ -494,6 +498,7 @@ fn main() -> ExitCode {
         "bench" => bench(),
         "bench-playback" => bench_playback(),
         "web" => web(&std::env::args().skip(2).collect::<Vec<_>>()),
+        "fonts" => fonts::prepare(&target_dir(), std::env::var_os("CRAFT_FONTS_DIR").as_deref()).map(|path| println!("{}", path.display())),
         "version" => {
             let rest: Vec<String> = std::env::args().skip(2).collect();
             version::run(&root(), &rest.iter().map(String::as_str).collect::<Vec<_>>())
@@ -507,7 +512,7 @@ fn main() -> ExitCode {
             ico::run(&rest.iter().map(String::as_str).collect::<Vec<_>>())
         }
         _ => Err(
-            "usage: cargo xtask <layers|assets|wasm|web [--dev] [--serve PORT]|fixtures [crate…]|parity [--area menus|effects|transitions] [--reference FILE] [--out FILE] [--min PERCENT]|ico OUT IN…|version [set X.Y.Z]|ci|bench [args]|bench-playback [args]>"
+            "usage: cargo xtask <layers|assets|fonts|wasm|web [--dev] [--serve PORT]|fixtures [crate…]|parity [--area menus|effects|transitions] [--reference FILE] [--out FILE] [--min PERCENT]|ico OUT IN…|version [set X.Y.Z]|ci|bench [args]|bench-playback [args]>"
                 .into(),
         ),
     };

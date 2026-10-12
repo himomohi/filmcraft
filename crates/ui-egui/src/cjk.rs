@@ -1,4 +1,4 @@
-//! Chinese fallback fonts for document text in the interface, independent of UI language.
+//! Chinese and Korean fallback fonts for document text and the interface.
 //! Optional craft-fonts are preferred; native builds without them reuse one installed face.
 
 use std::sync::{Arc, OnceLock};
@@ -23,6 +23,10 @@ pub(crate) fn craft_fonts() -> impl Iterator<Item = &'static filmcraft_text::fon
     filmcraft_text::fonts::CRAFT_FONTS.iter().filter(|f| f.scripts.iter().any(|s| matches!(*s, "Hans" | "Hant")))
 }
 
+pub(crate) fn craft_korean_fonts() -> impl Iterator<Item = &'static filmcraft_text::fonts::CraftFont> {
+    filmcraft_text::fonts::CRAFT_FONTS.iter().filter(|f| f.scripts.iter().any(|s| matches!(*s, "Kore" | "Hang")))
+}
+
 // Hangul: neither the UI fonts nor the Chinese/Japanese fallbacks have it, so typed, pasted and
 // IME-composed Korean drew as missing-glyph boxes (artcraft#2093).
 const KOREAN_SAMPLE: &str = "한국어입력테스트";
@@ -36,6 +40,22 @@ fn system_font() -> Option<Arc<FontData>> {
 fn korean_font() -> Option<Arc<FontData>> {
     static FONT: OnceLock<Option<Arc<FontData>>> = OnceLock::new();
     FONT.get_or_init(|| find_system_font(KOREAN_SAMPLE, KOREAN_PREFERRED)).clone()
+}
+
+/// Dedicated Korean faces and some Chinese faces cover Hangul; verify the actual glyphs.
+pub(crate) fn korean_available() -> bool {
+    craft_korean_available() || korean_font().is_some()
+}
+
+fn craft_korean_available() -> bool {
+    static AVAILABLE: OnceLock<bool> = OnceLock::new();
+    *AVAILABLE.get_or_init(|| {
+        filmcraft_text::fonts::all_faces().iter().any(|f| {
+            f.info.origin == filmcraft_text::fonts::CRAFT_ORIGIN
+                && craft_korean_fonts().chain(craft_fonts()).any(|font| font.family == f.info.family)
+                && f.covers_text(KOREAN_SAMPLE)
+        })
+    })
 }
 
 /// A font collection's face index matters: Windows CJK UI fonts commonly live in TTC files.
@@ -64,7 +84,16 @@ pub(crate) fn available() -> bool {
 /// traditional hanzi in media and track names that Japanese fonts lack.
 pub(crate) fn install(fonts: &mut FontDefinitions) {
     install_chinese(fonts);
-    if let Some(font) = korean_font() {
+    for font in craft_korean_fonts() {
+        let name = format!("craft:{} {}", font.family, font.style);
+        fonts.font_data.insert(name.clone(), Arc::new(FontData::from_static(font.bytes)));
+        for stack in fonts.families.values_mut() {
+            stack.push(name.clone());
+        }
+    }
+    if !craft_korean_available()
+        && let Some(font) = korean_font()
+    {
         fonts.font_data.insert("system-korean".into(), font);
         for stack in fonts.families.values_mut() {
             stack.push("system-korean".into());

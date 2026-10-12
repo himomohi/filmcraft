@@ -207,6 +207,37 @@ fn spanish_search_finds_effects_and_presets_with_stable_automation_ids() {
 }
 
 #[test]
+fn korean_settings_and_effect_search_keep_automation_ids_and_document_content() {
+    if !filmcraft_ui_egui::i18n::korean_font_available() {
+        eprintln!("SKIPPED: no Korean font available");
+        return;
+    }
+    let mut d = Driver::demo();
+    let before = d.sequence();
+    d.ok("ui.menu.invoke", json!({"id": "app.settings.general"}));
+    d.frames(3);
+    d.ok("ui.click", json!({"id": "settings.general.interfaceLanguage"}));
+    d.frames(3);
+    assert!(d.element_ids("settings.general.interfaceLanguage.").contains(&"settings.general.interfaceLanguage.ko".to_string()));
+    d.ok("ui.click", json!({"id": "settings.general.interfaceLanguage.ko"}));
+    d.frames(3);
+    d.ok("ui.click", json!({"id": "settings.ok"}));
+    d.frames(3);
+    assert_eq!(d.harness.state().ui.language, filmcraft_ui_egui::i18n::Language::Ko);
+    assert_eq!(d.harness.state().session.prefs.general.interface_language, "ko");
+    d.ok("ui.panel.show", json!({"panel": "Effects"}));
+    for query in ["흐림", "gaussian"] {
+        d.ok("ui.set", json!({"effectsSearch": query}));
+        d.frames(3);
+        assert!(d.element_ids("effects.item.").contains(&"effects.item.gaussian_blur".to_string()));
+    }
+    assert_eq!(d.sequence(), before);
+    d.ok("ui.menu.invoke", json!({"id": "app.language.spanish"}));
+    assert_eq!(d.harness.state().ui.language, filmcraft_ui_egui::i18n::Language::Es);
+    d.ok("ui.menu.invoke", json!({"id": "app.language.english"}));
+}
+
+#[test]
 fn effects_panel_lists_the_premiere_transition_folders() {
     let mut d = Driver::demo();
     d.ok("ui.panel.show", json!({"panel": "Effects"}));

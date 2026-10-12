@@ -1,0 +1,1731 @@
+# Korean (ko) catalog: context <TAB> English source <TAB> Korean translation.
+# Empty context is a plain UI string; escapes: \n, \t, \\. Keep placeholders and trailing ….
+# Original translations from the meaning of FilmCraft's English strings, using ordinary Korean
+# video-editing vocabulary. No proprietary localisation resources were used.
+# Terms: clip = 클립, track = 트랙, sequence = 시퀀스, timeline = 타임라인,
+# bin = 보관함, playhead = 재생 헤드, marker = 마커, keyframe = 키프레임.
+# Technical names and user content keep their spelling. Untranslated strings fall back to English.
+
+	About FilmCraft	FilmCraft 정보
+	Add Audio Submix Track	오디오 서브믹스 트랙 추가
+	Add Caption at Playhead	재생 헤드 위치에 자막 추가
+	Add Chapter Marker…	챕터 마커 추가…
+	Add Edit	편집점 추가
+	Add Edit to All Tracks	모든 트랙에 편집점 추가
+	Add Flash Cue Marker…	Flash 큐 마커 추가…
+	Add Frame Hold	정지 프레임 추가
+	Add Guide…	안내선 추가…
+	Add Marker	마커 추가
+	Add New Caption Track…	새 자막 트랙 추가…
+	Add Range Marker	범위 마커 추가
+	Add Range Marker to In and Out	시작점과 종료점 사이에 범위 마커 추가
+	Add Tracks…	트랙 추가…
+	Adjustment Layer…	조정 레이어…
+	Align to Selection	선택 영역에 정렬
+	Align to Video Frame	비디오 프레임에 정렬
+	Align to Video Frame as Group	그룹으로 비디오 프레임에 정렬
+	All Panels	모든 패널
+	Alpha	알파
+	Appearance	화면 표시
+	Appearance…	화면 표시…
+	Apply Audio Transition	오디오 전환 적용
+	Apply Default Transitions to Selection	선택 영역에 기본 전환 적용
+	Apply Video Transition	비디오 전환 적용
+	Arrange	배치
+	ArtCraft Website	ArtCraft 웹사이트
+	Assembly	구성
+	Attach Proxies…	프록시 연결…
+	Audio	오디오
+	Audio Channels…	오디오 채널…
+	Audio Clip Mixer	오디오 클립 믹서
+	Audio Gain…	오디오 게인…
+	Audio Hardware…	오디오 하드웨어…
+	Audio In	오디오 시작점
+	Audio Meters	오디오 미터
+	Audio Options	오디오 옵션
+	Audio Out	오디오 종료점
+	Audio Track Mixer	오디오 트랙 믹서
+	Audio Waveform	오디오 파형
+	Auto Save…	자동 저장…
+	Automate to Sequence…	시퀀스에 자동 배치…
+	Bars and Tone…	컬러 바 및 톤…
+	Bin	보관함
+	Bin From Selection	선택 항목으로 보관함 만들기
+	Black Video…	검정 비디오…
+	Blue	파랑
+	Bottom	아래쪽
+	Breakout to Mono	모노 채널로 분리
+	Bring Forward	앞으로 이동
+	Bring to Front	맨 앞으로 이동
+	Brown	갈색
+	Captions	자막
+	Captions and Graphics	자막 및 그래픽
+	Captions…	자막…
+	Caribbean	카리브해색
+	Center Horizontally	가로 가운데 정렬
+	Center Vertically	세로 가운데 정렬
+	Cerulean	하늘색
+	Clear	지우기
+	Clear Guides	안내선 지우기
+	Clear In	시작점 지우기
+	Clear In and Out	시작점과 종료점 지우기
+	Clear Markers	마커 지우기
+	Clear Out	종료점 지우기
+	Clear Selected Marker	선택한 마커 지우기
+	Clip	클립
+	Close	닫기
+	Close All Other Projects	다른 프로젝트 모두 닫기
+	Close All Projects	모든 프로젝트 닫기
+	Close Gap	간격 없애기
+	Close Project	프로젝트 닫기
+	Color Management…	색상 관리…
+	Color Matte…	단색 매트…
+	Comparison View	비교 보기
+	Composite Video	합성 비디오
+	Consolidate Duplicates	중복 항목 통합
+	Copy	복사
+	Copy Paste Includes Sequence Markers	복사 및 붙여넣기에 시퀀스 마커 포함
+	Create Captions from Transcript…	전사 텍스트에서 자막 만들기…
+	Create Multi-Camera Source Sequence…	멀티 카메라 소스 시퀀스 만들기…
+	Create Proxies…	프록시 만들기…
+	Cut	잘라내기
+	Dark	어둡게
+	Darkest	가장 어둡게
+	Delete Render Files	렌더링 파일 삭제
+	Delete Render Files In to Out	시작점부터 종료점까지 렌더링 파일 삭제
+	Delete Tracks…	트랙 삭제…
+	Delete Transcript	전사 텍스트 삭제
+	Demo Footage	데모 영상
+	Demo Project	데모 프로젝트
+	Deselect All	모두 선택 해제
+	Detach Proxies	프록시 연결 해제
+	Display Mode	표시 모드
+	Distribute	분산 배치
+	Distribute Horizontally	가로로 균등 배치
+	Distribute Space Horizontally	가로 간격 균등 배치
+	Distribute Space Vertically	세로 간격 균등 배치
+	Distribute Vertically	세로로 균등 배치
+	Duplicate	복제
+	Dynamic Audio Waveforms	동적 오디오 파형
+	Edit	편집
+	Edit Offline…	오프라인 편집…
+	Edit Original	원본 편집
+	Edit Subclip…	하위 클립 편집…
+	Editing	편집
+	Effect Controls	효과 컨트롤
+	Effects	효과
+	Ellipse	타원
+	Enable	활성화
+	Enable Remix	리믹스 활성화
+	Essential Graphics	기본 그래픽
+	Essential Sound	기본 사운드
+	Events	이벤트
+	Export	내보내기
+	Export As Motion Graphics Template…	모션 그래픽 템플릿으로 내보내기…
+	Extract	간격 없이 추출
+	Extract Audio	오디오 추출
+	Field Options…	필드 옵션…
+	File	파일
+	File…	파일…
+	Fill frame	프레임 채우기
+	FilmCraft Help…	FilmCraft 도움말…
+	FilmCraft on GitHub	GitHub에서 FilmCraft 보기
+	FilmCraft on getartcraft.com	getartcraft.com에서 FilmCraft 보기
+	Find Next	다음 찾기
+	Find…	찾기…
+	Fit	맞추기
+	Fit to frame	프레임에 맞추기
+	Flatten	단일 시퀀스로 변환
+	Forest	숲색
+	Frame Blending	프레임 혼합
+	Frame Hold Options…	정지 프레임 옵션…
+	Frame Sampling	프레임 샘플링
+	From Bin	보관함에서
+	From Source Monitor	소스 모니터에서
+	From Source Monitor, Match Frame	소스 모니터에서 프레임 일치
+	From file…	파일에서…
+	Full	전체
+	Generate Audio Waveform	오디오 파형 생성
+	Get Media File Properties for	미디어 파일 속성 보기
+	Go to Gap	간격으로 이동
+	Go to In	시작점으로 이동
+	Go to Next Caption Segment	다음 자막 구간으로 이동
+	Go to Next Marker	다음 마커로 이동
+	Go to Out	종료점으로 이동
+	Go to Previous Caption Segment	이전 자막 구간으로 이동
+	Go to Previous Marker	이전 마커로 이동
+	Go to Split	분할점으로 이동
+	Graphics and Titles	그래픽 및 제목
+	Graphics…	그래픽…
+	Green	초록
+	Group	그룹 만들기
+	Guide Templates	안내선 템플릿
+	Help	도움말
+	Hide All Caption Tracks	모든 자막 트랙 숨기기
+	High Quality Playback	고품질 재생
+	History	작업 기록
+	Import From	가져올 위치
+	Import Image Sequence…	이미지 시퀀스 가져오기…
+	Import from Media Browser	미디어 브라우저에서 가져오기
+	Import…	가져오기…
+	Info	정보
+	Ingest Settings…	수집 설정…
+	Insert	삽입
+	Insert Frame Hold Segment	정지 프레임 구간 삽입
+	Install Motion Graphics Template…	모션 그래픽 템플릿 설치…
+	Interpret Footage…	영상 해석…
+	Join the ArtCraft Discord…	ArtCraft Discord 참여…
+	Keyboard Shortcuts…	키보드 단축키…
+	Label	레이블
+	Labels…	레이블…
+	Language	언어
+	Lavender	라벤더색
+	Learning	학습
+	Left	왼쪽
+	Libraries	라이브러리
+	Lift	간격을 남기고 제거
+	Light	밝게
+	Link	연결
+	Link Media…	미디어 연결…
+	Linked Selection	연결된 항목 함께 선택
+	Lock Guides	안내선 잠금
+	Lumetri Color	Lumetri 색상
+	Lumetri Scopes	Lumetri 스코프
+	Magnification	확대 배율
+	Make Offline…	오프라인으로 전환…
+	Make Subclip…	하위 클립 만들기…
+	Make Subsequence	하위 시퀀스 만들기
+	Manage Guides…	안내선 관리…
+	Mark Clip	클립 구간 표시
+	Mark In	시작점 표시
+	Mark Out	종료점 표시
+	Mark Selection	선택 구간 표시
+	Mark Split	분할점 표시
+	Markers	마커
+	Match Frame	프레임 일치
+	Media Analysis & Transcription…	미디어 분석 및 전사…
+	Media Browser	미디어 브라우저
+	Media Cache…	미디어 캐시…
+	Media…	미디어…
+	Memory…	메모리…
+	Merge Clips…	클립 병합…
+	Metadata	메타데이터
+	Modify	수정
+	Motion Graphics Template…	모션 그래픽 템플릿…
+	Multi-Camera	멀티 카메라
+	Multi-Camera View	멀티 카메라 보기
+	Nest…	중첩 시퀀스 만들기…
+	New	새로 만들기
+	New Layer	새 레이어
+	New Project Panel	새 프로젝트 패널
+	Next Appearance Mode	다음 화면 표시 모드
+	Next in Sequence	시퀀스의 다음 항목
+	Next in Track	트랙의 다음 항목
+	Normalize Mix Track…	믹스 트랙 정규화…
+	Offline File…	오프라인 파일…
+	Open Project…	프로젝트 열기…
+	Optical Flow	광학 흐름
+	Overwrite	덮어쓰기
+	Paste	붙여넣기
+	Paste Attributes…	속성 붙여넣기…
+	Paste Insert	삽입하여 붙여넣기
+	Paused Resolution	일시 정지 해상도
+	Playback Resolution	재생 해상도
+	Playback…	재생…
+	Plugins…	플러그인…
+	Polygon	다각형
+	Preferences	환경 설정
+	Previous in Sequence	시퀀스의 이전 항목
+	Previous in Track	트랙의 이전 항목
+	Program	프로그램
+	Progress	진행 상황
+	Project	프로젝트
+	Project Manager…	프로젝트 관리자…
+	Project Settings	프로젝트 설정
+	Project…	프로젝트…
+	Properties	속성
+	Purple	보라
+	Reconnect Full Resolution Media…	전체 해상도 미디어 다시 연결…
+	Recover Unsaved Changes…	저장하지 않은 변경 사항 복구…
+	Rectangle	직사각형
+	Red	빨강
+	Redo	다시 실행
+	Reference Monitor	참조 모니터
+	Remix	리믹스
+	Remix Properties…	리믹스 속성…
+	Remove Attributes…	속성 제거…
+	Remove Filler Words	불필요한 추임새 제거
+	Remove Pauses	무음 구간 제거
+	Remove Unused	사용하지 않는 항목 제거
+	Rename…	이름 바꾸기…
+	Render Audio	오디오 렌더링
+	Render Effects In to Out	시작점부터 종료점까지 효과 렌더링
+	Render In to Out	시작점부터 종료점까지 렌더링
+	Render Selection	선택 영역 렌더링
+	Replace Fonts in Projects…	프로젝트의 글꼴 바꾸기…
+	Replace With Clip	클립으로 바꾸기
+	Report an Issue…	문제 신고…
+	Reset All Parameters	모든 매개변수 초기화
+	Reset Duration	길이 초기화
+	Reset to Saved Layout	저장한 레이아웃으로 복원
+	Restore Captions from Source Clip	소스 클립에서 자막 복원
+	Reveal Log Files…	로그 파일 보기…
+	Reverse Match Frame	시퀀스에서 일치하는 프레임 찾기
+	Revert	저장한 상태로 되돌리기
+	Revert Remix	리믹스 되돌리기
+	Review	검토
+	Right	오른쪽
+	Ripple Delete	간격 없이 삭제
+	Ripple Sequence Markers	시퀀스 마커 함께 이동
+	Rose	장미색
+	Safe Margins	안전 영역
+	Save	저장
+	Save All	모두 저장
+	Save As…	다른 이름으로 저장…
+	Save Guides as Template…	안내선을 템플릿으로 저장…
+	Save a Copy…	사본 저장…
+	Save as Template…	템플릿으로 저장…
+	Scale to Frame Size	프레임 크기에 맞춰 비율 조정
+	Scene Edit Detection…	장면 편집점 감지…
+	Scratch Disks…	작업 디스크…
+	Search Bin	검색 보관함
+	Select	선택
+	Select All	모두 선택
+	Select All Matching	일치하는 항목 모두 선택
+	Select Label Group	레이블 그룹 선택
+	Select Next Graphic	다음 그래픽 선택
+	Select Next Layer	다음 레이어 선택
+	Select Previous Graphic	이전 그래픽 선택
+	Select Previous Layer	이전 레이어 선택
+	Selection Follows Playhead	재생 헤드 위치에 따라 선택
+	Selection as FilmCraft Project…	선택 항목을 FilmCraft 프로젝트로…
+	Selection…	선택 영역…
+	Send Backward	뒤로 이동
+	Send to Back	맨 뒤로 이동
+	Sequence	시퀀스
+	Sequence From Clip	클립으로 시퀀스 만들기
+	Sequence Settings…	시퀀스 설정…
+	Sequence…	시퀀스…
+	Settings	설정
+	Show Active Caption Tracks Only	활성 자막 트랙만 표시
+	Show All Caption Tracks	모든 자막 트랙 표시
+	Show All Marker Colors	모든 마커 색상 표시
+	Show Guides	안내선 표시
+	Show Rulers	눈금자 표시
+	Show Through Edits	연속 프레임 편집점 표시
+	Simplify Sequence…	시퀀스 단순화…
+	Snap in Program Monitor	프로그램 모니터에서 스냅
+	Snap in Timeline	타임라인에서 스냅
+	Source	소스
+	Source Settings…	소스 설정…
+	Speed/Duration…	속도/길이…
+	Synchronize…	동기화…
+	System Compatibility Report…	시스템 호환성 보고서…
+	Tan	황갈색
+	Teal	청록
+	Text	텍스트
+	Time Interpolation	시간 보간
+	Timecode	타임코드
+	Timecode…	타임코드…
+	Timeline	타임라인
+	Timeline…	타임라인…
+	Toggle Proxies	프록시 전환
+	Tools	도구
+	Top	위쪽
+	Transcribe Sequence…	시퀀스 전사…
+	Transcribe…	전사…
+	Transcript	전사 텍스트
+	Transparent Video…	투명 비디오…
+	Trim Edit	편집점 다듬기
+	Trim…	다듬기…
+	Undo	실행 취소
+	Ungroup	그룹 해제
+	Universal Counting Leader…	카운트다운 리더…
+	Update Metadata…	메타데이터 업데이트…
+	Upgrade Caption to Graphic	자막을 그래픽으로 변환
+	Upgrade to Source Graphic	소스 그래픽으로 변환
+	Vertical Text	세로 텍스트
+	Video In	비디오 시작점
+	Video Options	비디오 옵션
+	Video Out	비디오 종료점
+	Video and Audio Waveform Split	비디오와 오디오 파형 분할 보기
+	View	보기
+	Violet	자주색
+	Window	창
+	Workspaces	작업 영역
+	Yellow	노랑
+	Zoom In	확대
+	Zoom Out	축소
+	Zoom to Sequence	시퀀스에 맞춰 확대/축소
+	Project Notes	프로젝트 메모
+	{name} - Edited	{name} - 수정됨
+	Full screen	전체 화면
+	Volume	볼륨
+	Master volume: use the Audio Track Mixer	마스터 볼륨: 오디오 트랙 믹서를 사용하세요
+	Search	검색
+	Quick Export	빠른 내보내기
+	Join the ArtCraft Discord (discord.gg/artcraft)	ArtCraft Discord 참여 (discord.gg/artcraft)
+	Cancel	취소
+	OK	확인
+	Interpret Footage	영상 해석
+	Color Management · {n} item	색상 관리 · {n}개 항목
+	Color Management · {n} items	색상 관리 · {n}개 항목
+	Media colour space (from file metadata): {detected}	미디어 색 공간 (파일 메타데이터): {detected}
+	Override media colour space:	미디어 색 공간 재정의:
+	Use file metadata	파일 메타데이터 사용
+	Sequence Color Management	시퀀스 색상 관리
+	Working Color Space	작업 색 공간
+	Wide gamut color (composite in BT.2020)	넓은 색역 (BT.2020으로 합성)
+	Auto tone map media (HDR and log into SDR)	미디어 자동 톤 매핑 (HDR 및 로그를 SDR로 변환)
+	Audio Gain	오디오 게인
+	Set Gain to:	게인 설정:
+	Adjust Gain by:	게인 조정량:
+	Normalize Max Peak to:	최대 피크 정규화:
+	Normalize All Peaks to:	모든 피크 정규화:
+	Peak Amplitude: {peak}	피크 진폭: {peak}
+	Standard	표준
+	Adaptive	적응형
+	Mono	모노
+	Stereo	스테레오
+	Add Tracks	트랙 추가
+	Amount	수량
+	Placement	배치 위치
+	Track type	트랙 유형
+	Add video tracks	비디오 트랙 추가
+	Add audio tracks	오디오 트랙 추가
+	Add audio submix tracks	오디오 서브믹스 트랙 추가
+	After {name}	{name} 뒤
+	Before First Track	첫 번째 트랙 앞
+	Delete Tracks	트랙 삭제
+	Video Tracks	비디오 트랙
+	Audio Tracks	오디오 트랙
+	Delete Video Tracks	비디오 트랙 삭제
+	Delete Audio Tracks	오디오 트랙 삭제
+	All Empty Tracks	비어 있는 모든 트랙
+	Caption Tracks	자막 트랙
+	Delete Caption Tracks	자막 트랙 삭제
+	Delete Caption Track	자막 트랙 삭제
+	Delete Empty Caption Tracks	빈 자막 트랙 삭제
+	Version {version}	버전 {version}
+	A clean-room, pure-Rust non-linear video editor. Part of the ArtCraft family.	독자적으로 개발한 순수 Rust 비선형 영상 편집기입니다. ArtCraft 제품군에 속합니다.
+	Join the ArtCraft Discord	ArtCraft Discord 참여
+	Source code on GitHub	GitHub 소스 코드
+	Report an issue	문제 신고
+	MIT OR Apache-2.0. Fonts: Inter, Noto Serif and JetBrains Mono (SIL OFL 1.1).	MIT 또는 Apache-2.0. 글꼴: Inter, Noto Serif 및 JetBrains Mono (SIL OFL 1.1).
+	just now	방금
+	{n} s ago	{n}초 전
+	{n} min ago	{n}분 전
+	{n} h ago	{n}시간 전
+	All Events	모든 이벤트
+	Warnings and Errors	경고 및 오류
+	Errors Only	오류만
+	Clear All	모두 지우기
+	No events.	이벤트가 없습니다.
+	Show finished jobs	완료된 작업 표시
+	Cancelled	취소됨
+	Failed: {e}	실패: {e}
+	Done	완료
+	No background jobs.	백그라운드 작업이 없습니다.
+	Recover Unsaved Changes	저장하지 않은 변경 사항 복구
+	Untitled	제목 없음
+	FilmCraft was closed while “{name}” had unsaved changes.	“{name}”의 변경 사항을 저장하기 전에 FilmCraft가 종료되었습니다.
+	FilmCraft quit unexpectedly while “{name}” had unsaved changes.	“{name}”의 변경 사항을 저장하기 전에 FilmCraft가 예기치 않게 종료되었습니다.
+	Recover unsaved changes from {when}?	{when}의 저장하지 않은 변경 사항을 복구할까요?
+	The project had not been saved yet.	아직 저장하지 않은 프로젝트입니다.
+	{n} sessions have unsaved changes:	{n}개 세션에 저장하지 않은 변경 사항이 있습니다:
+	Discard	버리기
+	Recover	복구
+	Not Now	나중에
+	Are you sure you want to discard your changes to '{file}'?	'{file}'의 변경 사항을 버릴까요?
+	Yes	예
+	No	아니요
+	Add media to your project. Drop files anywhere in the window, or choose a source below.	프로젝트에 미디어를 추가하세요. 창에 파일을 끌어다 놓거나 아래에서 소스를 선택하세요.
+	Browse files…	파일 찾아보기…
+	Movies, audio and stills from disk	디스크의 동영상, 오디오 및 이미지
+	Demo footage	데모 영상
+	Six procedural 1080p clips with sound	소리가 포함된 절차적으로 생성한 1080p 클립 6개
+	Demo project	데모 프로젝트
+	A cut sequence with transitions, effects and music	전환, 효과 및 음악이 있는 편집 시퀀스
+	Bars and Tone	컬러 바 및 톤
+	SMPTE HD bars with 1 kHz reference tone	1 kHz 기준 톤이 포함된 SMPTE HD 컬러 바
+	Community	커뮤니티
+	Join us on Discord	Discord 참여
+	OMF Export Settings	OMF 내보내기 설정
+	AAF Export Settings	AAF 내보내기 설정
+	OMF Title:	OMF 제목:
+	Mixdown video	비디오 믹스다운
+	Audio:	오디오:
+	Encapsulate	단일 파일로 묶기
+	Separate Audio	오디오 분리
+	Embed	포함
+	Separate Files	파일 분리
+	Link to Media	미디어에 연결
+	Audio File Format:	오디오 파일 형식:
+	Sample Rate:	샘플 레이트:
+	Bits per Sample:	샘플당 비트 수:
+	Rendering:	렌더링:
+	Trim audio files	오디오 파일 다듬기
+	Handle Frames:	여유 프레임:
+	Render audio clip effects	오디오 클립 효과 렌더링
+	Breakout to mono	모노 채널로 분리
+	Exported {path}	{path} 내보내기 완료
+	Select a clip to view its metadata.	메타데이터를 보려면 클립을 선택하세요.
+	Clip: {name}	클립: {name}
+	Open	열기
+	(no sequence)	(시퀀스 없음)
+	Show or hide {color} markers	{color} 마커 표시 또는 숨기기
+	Marker	마커
+	{tc}  Chapter	{tc}  챕터
+	No markers. Press M to add one.	마커가 없습니다. M 키를 눌러 추가하세요.
+	All markers are hidden by the colour filter.	색상 필터로 모든 마커가 숨겨져 있습니다.
+	Type:	유형:
+	Video:	비디오:
+	Codec:	코덱:
+	Duration:	길이:
+	Settings:	설정:
+	Playhead:	재생 헤드:
+	Video {n}:	비디오 {n}:
+	Audio {n}:	오디오 {n}:
+	UI:	인터페이스:
+	{fps} fps · {n} frames queued	{fps} fps · 대기 중인 프레임 {n}개
+	{panel} — coming in a later milestone	{panel} — 향후 개발 단계에서 제공 예정
+	Close Panel	패널 닫기
+	Close Other Timeline Panels	다른 타임라인 패널 닫기
+	Close All	모두 닫기
+	Maximize Frame	패널 최대화
+	Restore Frame	패널 크기 복원
+	Restore Workspace	작업 영역 복원
+	Reveal Sequence in Project	프로젝트에서 시퀀스 표시
+	Video Thumbnails	비디오 썸네일
+	Audio Waveforms	오디오 파형
+	Delete Preset	프리셋 삭제
+	Export Preset…	프리셋 내보내기…
+	Import Presets…	프리셋 가져오기…
+	Effect presets	효과 프리셋
+	Save Preset	프리셋 저장
+	Name:	이름:
+	Type	유형
+	Scale	비율
+	Anchor to In Point	시작점에 고정
+	Anchor to Out Point	종료점에 고정
+	Without keyframes	키프레임 없이
+	Description:	설명:
+	Saved preset “{name}”	“{name}” 프리셋을 저장했습니다
+	Current duration {seconds} s	현재 길이 {seconds}초
+	Remix Properties	리믹스 속성
+	Target Duration:	목표 길이:
+	Segments:	구간:
+	Fewer · More	적게 · 많이
+	Variations:	변형:
+	Remixed to {seconds} s	{seconds}초로 리믹스했습니다
+	{mode} · no clip	{mode} · 클립 없음
+	{mode} · no sequence	{mode} · 시퀀스 없음
+	Remove Row	행 제거
+	Add a timecode row	타임코드 행 추가
+	Panner	패너
+	Mute	음소거
+	Send {n} Level	센드 {n} 레벨
+	Show Keyframes	키프레임 표시
+	Clip Keyframes	클립 키프레임
+	Track Keyframes	트랙 키프레임
+	Delete	삭제
+	Delete…	삭제…
+	Untitled Workspace	제목 없는 작업 영역
+	New Workspace	새 작업 영역
+	Edit Workspaces	작업 영역 편집
+	Rename	이름 바꾸기
+	Restore Original	원본 복원
+	Search effects	효과 검색
+	Apply to Selected Clips	선택한 클립에 적용
+	Metadata Display	메타데이터 표시
+	Save As New View Preset	새 보기 프리셋으로 저장
+	Manage Saved View Presets	저장된 보기 프리셋 관리
+	Freeform View Options	자유 배치 보기 옵션
+	Save Arrangement	배치 저장
+	Saves the view, columns, sort, thumbnail and font size.	보기, 열, 정렬, 썸네일 및 글꼴 크기를 저장합니다.
+	Grid spacing:	격자 간격:
+	Default clip size:	기본 클립 크기:
+	Snap to grid	격자에 스냅
+	Show clip names	클립 이름 표시
+	Show durations	길이 표시
+	Show:	표시:
+	Search fields	필드 검색
+	Project Metadata	프로젝트 메타데이터
+	Add Property…	속성 추가…
+	Column order	열 순서
+	{n}. (empty)	{n}. (비어 있음)
+	Restore	복원
+	Overwrite with Current View	현재 보기로 덮어쓰기
+	Graphics text search arrives with M10.1–M10.2	그래픽 텍스트 검색은 M10.1–M10.2에서 제공 예정입니다
+	Open a sequence to work with captions	자막 작업을 하려면 시퀀스를 여세요
+	Add captions	자막 추가
+	Create a caption track or import a caption file.	자막 트랙을 만들거나 자막 파일을 가져오세요.
+	Create new caption track	새 자막 트랙 만들기
+	Import captions file…	자막 파일 가져오기…
+	New {format} track	새 {format} 트랙
+	Add caption at playhead	재생 헤드 위치에 자막 추가
+	Split caption at playhead	재생 헤드 위치에서 자막 분할
+	Merge selected captions	선택한 자막 병합
+	Delete selected captions	선택한 자막 삭제
+	No captions on this track. Press + to add one at the playhead.	이 트랙에 자막이 없습니다. +를 눌러 재생 헤드 위치에 추가하세요.
+	No matching captions.	일치하는 자막이 없습니다.
+	Open a sequence to see its transcript	전사 텍스트를 보려면 시퀀스를 여세요
+	Transcribe sequence	시퀀스 전사
+	Speech-to-text turns the dialogue into editable text.	음성 인식으로 대사를 편집 가능한 텍스트로 변환합니다.
+	This build has no speech-to-text; import a transcript with transcript.set.	이 빌드에는 음성 인식이 없습니다. transcript.set으로 전사 텍스트를 가져오세요.
+	Transcribe	전사
+	Extract selected text	선택한 텍스트 간격 없이 추출
+	Lift selected text	선택한 텍스트 간격을 남기고 제거
+	Remove filler words	불필요한 추임새 제거
+	Create captions	자막 만들기
+	Speaker	화자
+	Box	상자
+	Align	정렬
+	Align left	왼쪽 정렬
+	Align center	가운데 정렬
+	Align right	오른쪽 정렬
+	Position	위치
+	Position: top	위치: 위쪽
+	Position: middle	위치: 가운데
+	Position: bottom	위치: 아래쪽
+	(gap)	(간격)
+	Out: {name}	종료: {name}
+	In: {name}	시작: {name}
+	Play Around Edit (Space loops, Shift+K once)	편집점 주변 재생 (Space 반복, Shift+K 한 번)
+	Trim Backward Many	여러 프레임 뒤로 다듬기
+	Trim Backward	뒤로 다듬기
+	Apply Default Transitions	기본 전환 적용
+	Apply Default Transitions to Selection (Shift+D)	선택 영역에 기본 전환 적용 (Shift+D)
+	Trim Forward	앞으로 다듬기
+	Trim Forward Many	여러 프레임 앞으로 다듬기
+	Exit Trim Mode	다듬기 모드 종료
+	Voice-over record (right-click: Voice-Over Record Settings…)	보이스오버 녹음 (오른쪽 클릭: 보이스오버 녹음 설정…)
+	Voice-Over Record Settings…	보이스오버 녹음 설정…
+	Recording voice-over…	보이스오버 녹음 중…
+	Voice-over recorded: {p}	보이스오버 녹음 완료: {p}
+	Voice-over recording stopped (nothing recorded)	보이스오버 녹음을 중지했습니다 (녹음 내용 없음)
+	Post-roll	포스트롤
+	● Recording	● 녹음 중
+	Voice-Over Record Settings	보이스오버 녹음 설정
+	Source:	소스:
+	Default Input	기본 입력
+	Input:	입력:
+	Channel {n}	채널 {n}
+	Countdown Sound Cues	카운트다운 소리 신호
+	Pre-roll:	프리롤:
+	 seconds	 초
+	Post-roll:	포스트롤:
+	Playback starts the pre-roll before the playhead (or the In point); with In/Out marked, recording punches in and out there.	재생 헤드 (또는 시작점) 앞에서 프리롤 재생을 시작합니다. 시작점과 종료점이 있으면 해당 구간만 녹음합니다.
+	Effect	효과
+	Clip Fx Editor	클립 효과 편집기
+	Track Fx Editor	트랙 효과 편집기
+	Master Gain	마스터 게인
+	Reset	초기화
+	Band {n}	밴드 {n}
+	Solo	솔로
+	Bypass	우회
+	Thr	임계값
+	Ratio	비율
+	Att	어택
+	Rel	릴리스
+	Gain	게인
+	Output Gain	출력 게인
+	Limiter	리미터
+	Link Channels	채널 연결
+	Limiter Threshold	리미터 임계값
+	Limiter Release	리미터 릴리스
+	Auto Gate	자동 게이트
+	Threshold	임계값
+	Attack	어택
+	Release	릴리스
+	Hold	유지
+	Compressor	컴프레서
+	Auto Makeup	자동 메이크업
+	Makeup	메이크업
+	Expander	익스팬더
+	Soft Clip	소프트 클리핑
+	(no sequences)	(시퀀스 없음)
+	(no clips)	(클립 없음)
+	Show Transport Controls	재생 컨트롤 표시
+	Loop	반복
+	Multi-Camera Audio Follows Video	멀티 카메라 오디오를 비디오에 맞춰 전환
+	Multi-Camera Record	멀티 카메라 녹화
+	Multi-Camera Selection Top Down	멀티 카메라 위에서부터 선택
+	Show Multi-Camera Preview Monitor	멀티 카메라 미리보기 모니터 표시
+	Auto-Adjust Multi-Camera Playback Quality	멀티 카메라 재생 품질 자동 조정
+	Transmit Multi-Camera View	멀티 카메라 보기 전송
+	Multi-Camera Layout	멀티 카메라 레이아웃
+	Automatic	자동
+	Edit Cameras…	카메라 편집…
+	Add Marker (M)	마커 추가 (M)
+	Mark In (I)	시작점 표시 (I)
+	Mark Out (O)	종료점 표시 (O)
+	Go to In (Shift+I)	시작점으로 이동 (Shift+I)
+	Step Back 1 Frame (Left)	이전 프레임 (왼쪽 화살표)
+	Play-Stop Toggle (Space)	재생/정지 전환 (Space)
+	Step Forward 1 Frame (Right)	다음 프레임 (오른쪽 화살표)
+	Go to Out (Shift+O)	종료점으로 이동 (Shift+O)
+	Insert (,)	삽입 (,)
+	Overwrite (.)	덮어쓰기 (.)
+	Export Frame (Shift+E)	프레임 내보내기 (Shift+E)
+	Lift (;)	간격을 남기고 제거 (;)
+	Extract (')	간격 없이 추출 (')
+	Export Frame: use Export mode (M6)	프레임 내보내기: 내보내기 모드를 사용하세요 (M6)
+	Button Editor	버튼 편집기
+	More transport controls	추가 재생 컨트롤
+	Multi-Camera Record on	멀티 카메라 녹화 켜짐
+	Multi-Camera Record off	멀티 카메라 녹화 꺼짐
+	{first} - Merged	{first} - 병합됨
+	{first} Multicam	{first} 멀티 카메라
+	In Points	시작점
+	Out Points	종료점
+	Clip Marker	클립 마커
+	Merge Clips	클립 병합
+	Create Multi-Camera Source Sequence	멀티 카메라 소스 시퀀스 만들기
+	Synchronize Clips	클립 동기화
+	Clip Name:	클립 이름:
+	Sequence Name:	시퀀스 이름:
+	{n} clip(s): {names}	클립 {n}개: {names}
+	{n} clip(s) selected; the clip on the reference track stays put.	클립 {n}개 선택됨. 참조 트랙의 클립은 이동하지 않습니다.
+	Synchronize Point	동기화 기준점
+	Ignore Hours	시간 단위 무시
+	first marker	첫 번째 마커
+	Offset Audio by:	오디오 오프셋:
+	Offset:	오프셋:
+	 frames	 프레임
+	Reference track:	참조 트랙:
+	lowest (V1…)	맨 아래 (V1…)
+	Remove Audio from AV Clip	AV 클립에서 오디오 제거
+	Camera 1	카메라 1
+	All Cameras	모든 카메라
+	Switch Audio	오디오 전환
+	Camera Names	카메라 이름
+	Clip Names	클립 이름
+	Enumerate Cameras	카메라에 번호 지정
+	Camera Angle Metadata	카메라 앵글 메타데이터
+	Move source clips to Processed Clips bin	소스 클립을 처리된 클립 보관함으로 이동
+	Synchronized {n} clip group(s)	클립 그룹 {n}개 동기화 완료
+	Merged clip created	병합 클립을 만들었습니다
+	Multi-camera source sequence with {n} camera(s)	카메라 {n}개가 있는 멀티 카메라 소스 시퀀스
+	No multi-camera clip at the playhead	재생 헤드 위치에 멀티 카메라 클립이 없습니다
+	Camera {n} — {name}	카메라 {n} — {name}
+	Page {page} of {pages}	{page}/{pages}페이지
+	Previous page	이전 페이지
+	Next page	다음 페이지
+	Multi-Camera Record On/Off (0)	멀티 카메라 녹화 켜기/끄기 (0)
+	Record	녹음/녹화
+	Edit Cameras	카메라 편집
+	Cameras shown in the Multi-Camera view (uncheck to hide).	멀티 카메라 보기에 표시할 카메라 (선택을 해제하면 숨겨집니다).
+	Recorded {n} multi-camera cut(s)	멀티 카메라 편집점 {n}개를 기록했습니다
+	Clamp Signal	신호 범위 제한
+	Presets	프리셋
+	Parade ({kind})	퍼레이드 ({kind})
+	Waveform ({kind})	파형 ({kind})
+	Parade Type	퍼레이드 유형
+	Waveform Type	파형 유형
+	Vectorscope Targets	벡터스코프 기준점
+	Colour Space	색 공간
+	Brightness	밝기
+	Signal Scale	신호 배율
+	Histogram	히스토그램
+	Paste Attributes	속성 붙여넣기
+	Remove Attributes	속성 제거
+	New Offline File	새 오프라인 파일
+	Nested Sequence Name	중첩 시퀀스 이름
+	Make Subclip	하위 클립 만들기
+	Edit Subclip	하위 클립 편집
+	Modify Clip: Audio Channels	클립 수정: 오디오 채널
+	Modify Clip: Timecode	클립 수정: 타임코드
+	Frame Hold Options	정지 프레임 옵션
+	Field Options	필드 옵션
+	Save Project	프로젝트 저장
+	Motion	모션
+	Opacity	불투명도
+	Time Remapping	시간 재매핑
+	Channel Volume	채널 볼륨
+	In Point	시작점
+	Out Point	종료점
+	Playhead	재생 헤드
+	Source Timecode	소스 타임코드
+	Sequence Time	시퀀스 시간
+	Video Attributes	비디오 속성
+	Audio Attributes	오디오 속성
+	No effects	효과 없음
+	Scale Attribute Times	속성 시간 비율 조정
+	File Name:	파일 이름:
+	Tape Name:	테이프 이름:
+	Contains:	포함 항목:
+	Video	비디오
+	Width:	너비:
+	Height:	높이:
+	Frame Rate:	프레임 레이트:
+	Media Start:	미디어 시작:
+	Subclip: {name}	하위 클립: {name}
+	Start:	시작:
+	End:	끝:
+	Restrict Trims To Subclip Boundaries	하위 클립 경계 안에서만 다듬기
+	Convert to Master Clip	마스터 클립으로 변환
+	Clip Channel Format:	클립 채널 형식:
+	Number of Audio Clips:	오디오 클립 수:
+	Media Source Channels	미디어 소스 채널
+	Ch. {n}	채널 {n}
+	Clip {n}	클립 {n}
+	Source channels the selected audio clips play:	선택한 오디오 클립에서 재생할 소스 채널:
+	Set Timecode:	타임코드 설정:
+	Use the file's timecode	파일의 타임코드 사용
+	Hold On	정지할 위치
+	Timecode:	타임코드:
+	Hold Filters	필터 유지
+	Reverse Field Dominance	필드 우선순위 반전
+	Processing Options	처리 옵션
+	None	없음
+	Always Deinterlace	항상 디인터레이스
+	Flicker Removal	깜박임 제거
+	Save changes to “{project_name}” before closing?	닫기 전에 “{project_name}”의 변경 사항을 저장할까요?
+	Don't Save	저장 안 함
+	All media is online.	모든 미디어가 연결되어 있습니다.
+	{name} (copy)	{name} (사본)
+	Offline	오프라인
+	Missing	없음
+	Link Media	미디어 연결
+	{n} clip(s) can't find their media. Locate them, search a folder, or leave them offline.	클립 {n}개의 미디어를 찾을 수 없습니다. 파일이나 폴더를 찾아 연결하거나 오프라인으로 유지하세요.
+	Clip Name	클립 이름
+	File Name	파일 이름
+	File Path	파일 경로
+	Status	상태
+	Match file properties:	일치시킬 파일 속성:
+	File Extension	파일 확장자
+	Clip ID (fingerprint)	클립 ID (지문)
+	Duration	길이
+	Media Start	미디어 시작
+	Frame Size / Rate	프레임 크기 / 레이트
+	Align Timecode	타임코드 정렬
+	Relink others automatically	다른 항목 자동 재연결
+	Search in:	검색 위치:
+	Browse…	찾아보기…
+	A file dialog is already open	파일 대화상자가 이미 열려 있습니다
+	Exact name matches only	이름이 정확히 일치하는 항목만
+	No candidates yet — Search a folder or Locate the file.	후보가 없습니다. 폴더를 검색하거나 파일을 찾으세요.
+	✔ same file	✔ 같은 파일
+	✔ matches	✔ 일치
+	Interface Language	인터페이스 언어
+	System Language	시스템 언어
+	At Startup	시작 시
+	When Opening a Project	프로젝트를 열 때
+	Double-click	두 번 클릭
+	+ Cmd	+ Cmd
+	+ Opt	+ Opt
+	Show Event Indicator	이벤트 표시기 표시
+	Show Tool Tips	도구 설명 표시
+	Show Rich Tool Tips	상세 도구 설명 표시
+	Show Workspace Reset Warning dialog on double click	두 번 클릭할 때 작업 영역 초기화 경고 표시
+	Show Project Load Error Dialog	프로젝트 불러오기 오류 대화상자 표시
+	Show system compatibility issues at startup	시작 시 시스템 호환성 문제 표시
+	Show "Project:" and "Bin:" in Project panel tab	프로젝트 패널 탭에 "프로젝트:"와 "보관함:" 표시
+	Show Mask Tracker Preview	마스크 추적 미리보기 표시
+	Appearance Mode	화면 표시 모드
+	Light Theme	밝은 테마
+	Dark Theme	어두운 테마
+	Color Theme	색상 테마
+	Accessible color contrast	접근성을 위한 색상 대비
+	Highlight Color	강조 색상
+	UI Scale	인터페이스 배율
+	Automatch Time	자동 일치 시간
+	5.1 Mixdown Type	5.1 믹스다운 유형
+	Large Volume Adjustment	큰 볼륨 조정량
+	Sum multichannel outputs to mono in Source Monitor	소스 모니터에서 다중 채널 출력을 모노로 합치기
+	Play audio while scrubbing in Source and Program Monitors	소스 및 프로그램 모니터에서 스크러빙 중 오디오 재생
+	Maintain pitch while shuttling	배속 재생 중 피치 유지
+	Mute input during timeline recording	타임라인 녹음 중 입력 음소거
+	Generate waveforms automatically during import	가져올 때 자동으로 파형 생성
+	Generate waveforms and conform audio using multithreading	다중 스레드로 파형 생성 및 오디오 변환
+	Render audio when rendering video	비디오 렌더링 시 오디오도 렌더링
+	Auto-tag audio types in the timeline	타임라인에서 오디오 유형 자동 태그
+	Always override audio tags	항상 오디오 태그 덮어쓰기
+	Linear keyframe thinning	선형 키프레임 줄이기
+	Minimum time interval thinning	최소 시간 간격으로 키프레임 줄이기
+	Minimum time	최소 시간
+	Location	위치
+	Device Class	장치 유형
+	Default Output	기본 출력
+	I/O Buffer Size	입출력 버퍼 크기
+	Sample Rate	샘플 레이트
+	Attempt to force hardware to document sample rate	하드웨어를 문서 샘플 레이트에 맞추기
+	Left channel to device output	왼쪽 채널 장치 출력
+	Right channel to device output	오른쪽 채널 장치 출력
+	Automatically save projects	프로젝트 자동 저장
+	Automatically Save Every	자동 저장 간격
+	Maximum Project Versions	최대 프로젝트 버전 수
+	Auto Save also saves the current project(s)	자동 저장 시 현재 프로젝트도 저장
+	Keep a recovery copy of unsaved changes	저장하지 않은 변경 사항의 복구 사본 유지
+	Update it at least every	최대 업데이트 간격
+	Display Color Management	디스플레이 색상 관리
+	Extended Dynamic Range Monitoring	확장 다이내믹 레인지 모니터링
+	HDR Graphics White (Nits)	HDR 그래픽 흰색 (니트)
+	Ligatures	합자
+	Hindi digits	힌디어 숫자
+	Smart quotes	스마트 따옴표
+	Default paragraph direction	기본 문단 방향
+	Stroke line join	선 연결 방식
+	Miter limit	각진 연결 한도
+	Stroke line cap	선 끝 모양
+	Background fill	배경 채우기
+	Default subtitle and text font	기본 자막 및 텍스트 글꼴
+	Missing font replacement	없는 글꼴의 대체 글꼴
+	Default Emoji font	기본 이모지 글꼴
+	Default closed caption font	기본 폐쇄 자막 글꼴
+	Monospace only	고정 폭 글꼴만
+	Always import embedded CEA-708 closed captions with wide aspect.	포함된 CEA-708 폐쇄 자막을 항상 와이드 비율로 가져옵니다.
+	Movie (audio and video)	동영상 (오디오 및 비디오)
+	Still	이미지
+	Dynamic Link	동적 연결
+	Indeterminate Media Timebase	미디어 시간 기준이 불명확할 때
+	Frame Count	프레임 수
+	Default Media Scaling	기본 미디어 크기 조정
+	Write XMP ID to files on import	가져올 때 파일에 XMP ID 기록
+	Validate Content Credentials on import	가져올 때 콘텐츠 자격 증명 검증
+	Write clip markers to XMP	클립 마커를 XMP에 기록
+	Enable clip and XMP metadata linking	클립과 XMP 메타데이터 연결 활성화
+	Include captions on import	가져올 때 자막 포함
+	Enable proxies	프록시 활성화
+	Allow duplicate media during project import	프로젝트 가져오기 시 중복 미디어 허용
+	Create folder for imported projects	가져온 프로젝트의 폴더 생성
+	Automatically Hide Dependent Clips	종속 클립 자동 숨기기
+	Import numbered stills as image sequences	번호가 있는 이미지를 이미지 시퀀스로 가져오기
+	Automatically refresh growing files	크기가 증가하는 파일 자동 새로고침
+	Automatically resume playback for growing files in Source Monitor	소스 모니터에서 크기가 증가하는 파일 자동 재생 재개
+	Refresh growing Files Every	크기가 증가하는 파일 새로고침 간격
+	Enable hardware accelerated decoding (requires restart)	하드웨어 가속 디코딩 활성화 (재시작 필요)
+	Enable ProRes hardware accelerated encoding, if available	사용 가능한 경우 ProRes 하드웨어 가속 인코딩 활성화
+	Cache analysis results for re-use	분석 결과를 캐시하여 재사용
+	Analyze all imported media to search for visuals or audio	영상이나 오디오 검색을 위해 가져온 모든 미디어 분석
+	Automatically transcribe clips	클립 자동 전사
+	Transcription preferences	전사 환경 설정
+	Speaker Labeling	화자 레이블 지정
+	Enable language auto-detection	언어 자동 감지 활성화
+	Default language	기본 언어
+	Speech model	음성 모델
+	Save .cfa and .pek media cache files next to original media files when possible	가능하면 .cfa 및 .pek 미디어 캐시 파일을 원본 미디어 옆에 저장
+	Policy	정책
+	Delete files older than	다음 기간보다 오래된 파일 삭제
+	Delete oldest files when the cache exceeds	캐시가 다음 크기를 넘으면 오래된 파일부터 삭제
+	RAM reserved for other applications	다른 앱에 예약할 RAM
+	Frame cache for monitors and thumbnails	모니터 및 썸네일 프레임 캐시
+	Preroll	프리롤
+	Postroll	포스트롤
+	Step forward/back many	여러 프레임 앞뒤로 이동
+	Pause Media Encoder queue during playback	재생 중 미디어 인코더 대기열 일시 정지
+	Enable Mercury Transmit	Mercury Transmit 활성화
+	Disable video output when in the background	백그라운드에서 비디오 출력 비활성화
+	Draft decoding at reduced playback resolution (H.264: faster, some frames less filtered)	낮은 재생 해상도로 초안 디코딩 (H.264: 빠르지만 일부 프레임 필터링 감소)
+	Hardware decoding	하드웨어 디코딩
+	Enable developer mode	개발자 모드 활성화
+	Video Transition Default Duration	비디오 전환 기본 길이
+	Audio Transition Default Duration	오디오 전환 기본 길이
+	Still Image Default Duration	이미지 기본 길이
+	Timeline Playback Auto-Scrolling	타임라인 재생 자동 스크롤
+	Timeline Mouse Scrolling	타임라인 마우스 스크롤
+	Mono Media	모노 미디어
+	Stereo Media	스테레오 미디어
+	5.1 Media	5.1 미디어
+	Multichannel Mono Media	다중 채널 모노 미디어
+	Set focus on the Timeline when performing Insert/Overwrite edits	삽입/덮어쓰기 편집 시 타임라인에 포커스 설정
+	Snap playhead in Timeline when Snap is enabled	스냅이 켜져 있으면 타임라인 재생 헤드에도 적용
+	At playback end, return to beginning when restarting playback	재생이 끝난 후 다시 재생하면 처음으로 이동
+	Display out of sync indicators for unlinked clips	연결이 해제된 클립의 동기화 불일치 표시
+	Play after rendering previews	미리보기 렌더링 후 재생
+	Show Clip Mismatch Warning dialog	클립 불일치 경고 표시
+	Match frame sets in point	프레임 일치 시 시작점 설정
+	Restore open sequences when opening projects	프로젝트를 열 때 열려 있던 시퀀스 복원
+	Add tracks automatically when editing source clips onto the Timeline	소스 클립을 타임라인에 편집할 때 트랙 자동 추가
+	Place files dropped onto the Timeline directly on the Timeline	타임라인에 놓은 파일을 타임라인에 직접 배치
+	Large Trim Offset	큰 다듬기 이동량
+	Allow Selection tool to choose Roll and Ripple trims without modifier key	보조 키 없이 선택 도구로 롤 및 리플 다듬기 선택 허용
+	Allow current tool to change trim type of previously selected edit point	현재 도구로 이전에 선택한 편집점의 다듬기 유형 변경 허용
+	Shift clips that overlap trim point during ripple trimming	리플 다듬기 시 다듬기 지점과 겹치는 클립 이동
+	Ripple trim adds edits to keep both sides of trim in sync	리플 다듬기 시 양쪽 동기화를 위해 편집점 추가
+	Playhead position determines trim monitor loop playback	재생 헤드 위치로 다듬기 모니터 반복 재생 결정
+	Update timeline dynamically during ripple edits.	리플 편집 중 타임라인을 동적으로 업데이트합니다.
+	Bins	보관함
+	Projects	프로젝트
+	Automation Keyframe Optimization	자동화 키프레임 최적화
+	Render Edit in Audition files to:	Audition 편집 렌더링 파일 저장 위치:
+	Output Mapping	출력 매핑
+	Local Projects	로컬 프로젝트
+	Crash Recovery	충돌 복구
+	Changes are copied in the background a moment after each edit. If FilmCraft quits unexpectedly, they are offered the next time it starts.	편집 직후 백그라운드에서 변경 사항을 복사합니다. FilmCraft가 예기치 않게 종료되면 다음 시작 시 복구할 수 있습니다.
+	Display Color Settings	디스플레이 색상 설정
+	For color management parameters, go to the Settings tab in the Lumetri Color panel.	색상 관리 매개변수는 Lumetri 색상 패널의 설정 탭에서 조정하세요.
+	Shapes	도형
+	Closed Captions	폐쇄 자막
+	Label Defaults	기본 레이블
+	Growing Files	크기가 증가하는 파일
+	Media analysis and transcriptions will be cached in the Media Cache folder. Reanalysis won't be required if the media is imported into another project on this computer.	미디어 분석 및 전사 결과는 미디어 캐시 폴더에 저장됩니다. 이 컴퓨터의 다른 프로젝트로 가져와도 다시 분석할 필요가 없습니다.
+	Media Analysis	미디어 분석
+	Transcription	전사
+	Media Cache Files	미디어 캐시 파일
+	Media Cache Database	미디어 캐시 데이터베이스
+	Media Cache Management	미디어 캐시 관리
+	The media cache holds render previews of unsaved projects and other files FilmCraft can recreate. Deleting them is always safe; FilmCraft rebuilds them as needed.	미디어 캐시에는 저장하지 않은 프로젝트의 렌더링 미리보기와 다시 생성할 수 있는 파일이 있습니다. 삭제해도 필요할 때 다시 생성됩니다.
+	Hardware decoding: Auto uses the system's video decoder (VideoToolbox on macOS, Media Foundation on Windows, VA-API or NVDEC for H.264 and HEVC on Linux) for the streams it supports, and FilmCraft's own decoder for everything else or if the hardware fails. Media that is already open keeps its decoder until it is reopened.	하드웨어 디코딩: 자동 모드는 지원되는 스트림에 시스템 디코더 (macOS의 VideoToolbox, Windows의 Media Foundation, Linux의 H.264 및 HEVC용 VA-API 또는 NVDEC)를 사용합니다. 나머지 스트림이나 하드웨어 오류 시 FilmCraft 디코더를 사용합니다. 이미 열린 미디어는 다시 열 때까지 현재 디코더를 유지합니다.
+	Plugins	플러그인
+	No plugins are installed. Changes will take effect the next time you start FilmCraft.	설치된 플러그인이 없습니다. 변경 사항은 FilmCraft를 다시 시작하면 적용됩니다.
+	Default Audio Tracks	기본 오디오 트랙
+	General	일반
+	Audio Hardware	오디오 하드웨어
+	Auto Save	자동 저장
+	Color	색상
+	Graphics	그래픽
+	Labels	레이블
+	Media	미디어
+	Media Analysis & Transcription	미디어 분석 및 전사
+	Media Cache	미디어 캐시
+	Memory	메모리
+	Playback	재생
+	Trim	다듬기
+	Show Home	홈 화면 표시
+	Open Most Recent	가장 최근 프로젝트 열기
+	Start with an Empty Project	빈 프로젝트로 시작
+	Show Open Dialog	열기 대화상자 표시
+	Open in place	현재 위치에서 열기
+	Open new tab	새 탭에서 열기
+	Open in new window	새 창에서 열기
+	Sync with system	시스템과 동기화
+	Auto (system)	자동 (시스템)
+	Front Only	전면만
+	Front + Rear	전면 + 후면
+	Front + LFE	전면 + LFE
+	Front + Rear + LFE	전면 + 후면 + LFE
+	Scratch disk location for Captured Audio	캡처한 오디오의 작업 디스크 위치
+	Next to original media files	원본 미디어 파일 옆
+	Left to right	왼쪽에서 오른쪽
+	Right to left	오른쪽에서 왼쪽
+	Miter join	각진 연결
+	Round join	둥근 연결
+	Bevel join	경사진 연결
+	Butt cap	평평한 끝
+	Round cap	둥근 끝
+	Projecting cap	돌출된 끝
+	All lines	모든 줄
+	Per line	줄별
+	Use Media Source	미디어 소스 사용
+	Generate Timecode	타임코드 생성
+	Start at 0	0부터 시작
+	Start at 1	1부터 시작
+	Timecode Conversion	타임코드 변환
+	Scale to frame size	프레임 크기에 맞춰 비율 조정
+	Set to frame size	프레임 크기에 맞추기
+	In the Media Cache	미디어 캐시에 저장
+	In the project	프로젝트에 저장
+	Auto-transcribe only clips in sequences	시퀀스의 클립만 자동 전사
+	Auto-transcribe all imported clips	가져온 모든 클립 자동 전사
+	Label speakers	화자 레이블 지정
+	Don't label speakers	화자 레이블 지정 안 함
+	Spanish	스페인어
+	French	프랑스어
+	German	독일어
+	Italian	이탈리아어
+	Portuguese	포르투갈어
+	Dutch	네덜란드어
+	Japanese	일본어
+	Korean	한국어
+	Chinese	중국어
+	Russian	러시아어
+	Hindi	힌디어
+	Whisper tiny (fastest)	Whisper tiny (가장 빠름)
+	Whisper base (balanced)	Whisper base (균형)
+	Whisper small (most accurate)	Whisper small (가장 정확함)
+	Do not delete cache files automatically	캐시 파일 자동 삭제 안 함
+	Automatically delete cache files older than	다음 기간보다 오래된 캐시 파일 자동 삭제
+	Automatically delete oldest cache files when cache exceeds	캐시가 다음 크기를 넘으면 오래된 파일부터 자동 삭제
+	No Scroll	스크롤 안 함
+	Page Scroll	페이지 스크롤
+	Smooth Scroll	부드러운 스크롤
+	Vertical	세로
+	Horizontal	가로
+	Auto	자동
+	Off	끄기
+	Use File	파일 설정 사용
+	Frames	프레임
+	Seconds	초
+	seconds	초
+	minutes	분
+	minute(s)	분
+	second(s)	초
+	day(s)	일
+	frame(s)	프레임
+	frames	프레임
+	GB	GB
+	MB	MB
+	Audio Time Units	오디오 시간 단위
+	milliseconds	밀리초
+	days	일
+	Gaussian Blur	가우시안 흐림
+	Blur In	흐림으로 나타나기
+	Blur Out	흐림으로 사라지기
+	Video Effects	비디오 효과
+	Audio Effects	오디오 효과
+	Video Transitions	비디오 전환
+	Audio Transitions	오디오 전환
+	Blur & Sharpen	흐림 및 선명도
+	Blur	흐림
+	Sharpen	선명하게
+	Crop	자르기
+	Cross Dissolve	교차 디졸브
+	Dip to Black	검정으로 전환
+	Dip to White	흰색으로 전환
+	Constant Gain	일정 게인
+	Constant Power	일정 파워
+	Exponential Fade	지수 페이드
+	Dissolve	디졸브
+	Wipe	와이프
+	Distort	왜곡
+	Noise & Grain	노이즈 및 입자
+	Generate	생성
+	Color Correction	색상 보정
+	Legacy	레거시
+	Time	시간
+	Transform	변형
+	Blurriness	흐림 정도
+	Blur Dimensions	흐림 방향
+	Repeat Edge Pixels	가장자리 픽셀 반복
+	Horizontal and Vertical	가로 및 세로
+	no Korean font is available; the interface stays in English	한글 글꼴을 사용할 수 없어 인터페이스가 영어로 유지됩니다
+	no Chinese font is installed on this system; the interface stays in English	중국어 글꼴이 설치되어 있지 않아 인터페이스가 영어로 유지됩니다
+	no Japanese font is installed on this system; the interface stays in English	일본어 글꼴이 설치되어 있지 않아 인터페이스가 영어로 유지됩니다
+	The language changed but could not be saved: {e}	언어를 변경했지만 저장하지 못했습니다: {e}
+	Hide FilmCraft	FilmCraft 숨기기
+	Hide Others	다른 앱 숨기기
+	Quit FilmCraft	FilmCraft 종료
+	✖ different file	✖ 다른 파일
+	Preview	미리보기
+	Offline All	모두 오프라인으로 전환
+	Locate…	위치 찾기…
+	Linked {n} clip(s)	클립 {n}개 연결 완료
+	Nothing found with that name.	해당 이름의 항목을 찾지 못했습니다.
+	Make Offline	오프라인으로 전환
+	Make {n} selected clip(s) offline. Their clips show the offline slate until you link them again.	선택한 클립 {n}개를 오프라인으로 전환합니다. 다시 연결할 때까지 오프라인 화면이 표시됩니다.
+	Media files remain on disk	디스크에 미디어 파일 유지
+	Media files are deleted	미디어 파일 삭제
+	Create Proxies	프록시 만들기
+	{n} clip(s) selected.	클립 {n}개 선택됨.
+	Format and size	형식 및 크기
+	Destination	대상 위치
+	Next to the original media, in a Proxies folder	원본 미디어 옆의 Proxies 폴더
+	Proxies are made in the background and attached when done. Export always uses full-resolution media.	백그라운드에서 프록시를 만들고 완료되면 연결합니다. 내보내기에는 항상 전체 해상도 미디어를 사용합니다.
+	Creating {n} proxy file(s)…	프록시 파일 {n}개 생성 중…
+	Project Manager	프로젝트 관리자
+	Sequences	시퀀스
+	Resulting Project	결과 프로젝트
+	Collect Files and Copy to New Location	파일을 모아 새 위치에 복사
+	Consolidate and Transcode	통합 및 트랜스코딩
+	Options	옵션
+	Exclude Unused Clips	사용하지 않은 클립 제외
+	Include Handles:	여유 구간 포함:
+	Include Proxies	프록시 포함
+	Include Preview Files	미리보기 파일 포함
+	Destination Path	대상 경로
+	Disk space: original {original} · resulting {result} ({n} files)	디스크 공간: 원본 {original} · 결과 {result} (파일 {n}개)
+	Disk space: —	디스크 공간: —
+	Calculate	계산
+	Project Manager: writing {path}	프로젝트 관리자: {path} 저장 중
+	Timeline: (no sequences)	타임라인: (시퀀스 없음)
+	Browse	찾아보기
+	Select audio clips, then click a preset to apply it.	오디오 클립을 선택한 후 적용할 프리셋을 클릭하세요.
+	{name} (user)	{name} (사용자)
+	Select audio clips to edit them here	여기서 편집할 오디오 클립을 선택하세요
+	Multiple Clips Selected	여러 클립 선택됨
+	The selected clips have different audio types. Assign one type to edit them together.	선택한 클립의 오디오 유형이 다릅니다. 함께 편집하려면 같은 유형을 지정하세요.
+	Assign an audio type to the selection:	선택 항목에 오디오 유형 지정:
+	Clear Audio Type	오디오 유형 지우기
+	Preset:	프리셋:
+	(Custom)	(사용자 지정)
+	Preset name	프리셋 이름
+	Reduce Noise	노이즈 감소
+	Reduce Rumble	저주파 잡음 감소
+	DeHum	험 제거
+	DeEss	치찰음 감소
+	Reduce Reverb	잔향 감소
+	Dynamics	다이내믹스
+	EQ	EQ
+	Enhance Speech	음성 향상
+	Low Tone	저음
+	High Tone	고음
+	Mix	믹스
+	Reverb	리버브
+	Stereo Width	스테레오 폭
+	Remixing music to a target duration is not available yet. Trim the clip and add a crossfade instead.	목표 길이에 맞춘 음악 리믹스는 아직 사용할 수 없습니다. 클립을 다듬고 크로스페이드를 추가하세요.
+	Pan	팬
+	Auto-Match	자동 일치
+	Not matched yet	아직 일치시키지 않음
+	Matches each of the {n} clips on its own.	클립 {n}개를 각각 일치시킵니다.
+	Duck against:	다음 오디오에 맞춰 음량 낮추기:
+	Untagged	태그 없음
+	Sensitivity	감도
+	Reduce By	감소량
+	Fades	페이드
+	Generate Keyframes	키프레임 생성
+	Clip Volume	클립 볼륨
+	(no clip selected)	(선택한 클립 없음)
+	Master · {name}	마스터 · {name}
+	Add Lumetri Color to clip	클립에 Lumetri 색상 추가
+	Input LUT	입력 LUT
+	Temperature	색온도
+	Tint	색조
+	Saturation	채도
+	Exposure	노출
+	Contrast	대비
+	Highlights	밝은 영역
+	Shadows	어두운 영역
+	Whites	흰색 영역
+	Blacks	검정 영역
+	HDR	HDR
+	HDR White	HDR 흰색
+	HDR Specular	HDR 반사광
+	Look	룩
+	Look LUT	룩 LUT
+	Intensity	강도
+	Adjustments	조정
+	Faded Film	빛바랜 필름
+	Vibrance	생동감
+	RGB Curves	RGB 곡선
+	HDR Range	HDR 범위
+	Hue Saturation Curves	색조 및 채도 곡선
+	Hue vs Sat	색조 대비 채도
+	Hue vs Hue	색조 대비 색조
+	Hue vs Luma	색조 대비 휘도
+	Luma vs Sat	휘도 대비 채도
+	Sat vs Sat	채도 대비 채도
+	Midtones	중간 영역
+	Key	키
+	Hue	색조
+	Hue Range	색조 범위
+	Saturation Min	최소 채도
+	Luma Min	최소 휘도
+	Luma Max	최대 휘도
+	Soften	부드럽게
+	Show Mask	마스크 표시
+	Color/Gray	색상/회색
+	Color/Black	색상/검정
+	White/Black	흰색/검정
+	Refine	다듬기
+	Denoise	노이즈 제거
+	Correction	보정
+	Hue Shift	색조 이동
+	Midpoint	중간점
+	Roundness	둥근 정도
+	Feather	페더
+	LUT	LUT
+	Color Match	색상 일치
+	Reference	참조
+	Face Detection (protect skin tones)	얼굴 감지 (피부색 보호)
+	Apply Match	일치 적용
+	Create ellipse mask	타원 마스크 만들기
+	Create 4-point polygon mask	4점 다각형 마스크 만들기
+	Free draw bezier	베지어 자유 그리기
+	Click in the Program monitor to place mask points (drag for curves); click the first point or press Enter to close	프로그램 모니터를 클릭하여 마스크 점을 만드세요 (드래그하면 곡선). 첫 점을 클릭하거나 Enter 키를 눌러 닫으세요
+	Delete Mask	마스크 삭제
+	Inverted	반전
+	Drag: move · Alt-click: smooth/corner · Cmd-click: delete	드래그: 이동 · Alt 클릭: 곡선/모서리 · Cmd 클릭: 삭제
+	Track selected mask backward	선택한 마스크 뒤로 추적
+	Track selected mask backward 1 frame	선택한 마스크 한 프레임 뒤로 추적
+	Track selected mask forward 1 frame	선택한 마스크 한 프레임 앞으로 추적
+	Track selected mask forward	선택한 마스크 앞으로 추적
+	Stop tracking	추적 중지
+	Tracking method: {method}	추적 방식: {method}
+	Composite	합성
+	Comparison	비교
+	Video and Waveform	비디오 및 파형
+	System Default	시스템 기본값
+	Default location	기본 위치
+	Font family	글꼴 모음
+	Label Colors	레이블 색상
+	Decoded frames held for the monitors and thumbnails: {used} of {budget}.	모니터 및 썸네일에 보관한 디코딩 프레임: {budget} 중 {used}.
+	FilmCraft keeps the rest of the RAM free for other applications.	나머지 RAM은 다른 앱에서 사용할 수 있습니다.
+	not available in this session	이 세션에서 사용할 수 없음
+	Currently: {loc} — {files} file(s), {size}	현재: {loc} — 파일 {files}개, {size}
+	 ({ch} output channels)	 (출력 채널 {ch}개)
+	Programme left → device output {l}, right → device output {r}{dev}. Outputs beyond the device's channels fall back to 1 and 2.	프로그램 왼쪽 → 장치 출력 {l}, 오른쪽 → 장치 출력 {r}{dev}. 장치 채널 수를 넘는 출력은 1과 2를 사용합니다.
+	Auto-saves go to: {dir}	자동 저장 위치: {dir}
+	Recovery copy: {dir}	복구 사본: {dir}
+	Last auto-save {a} · last recovery copy {j}	마지막 자동 저장 {a} · 마지막 복구 사본 {j}
+	Last auto-save {a}	마지막 자동 저장 {a}
+	Last recovery copy {j}	마지막 복구 사본 {j}
+	Remove Media Cache Files	미디어 캐시 파일 제거
+	Deleted {n} file(s), {size}.	파일 {n}개, {size}를 삭제했습니다.
+	Reset…	초기화…
+	Source · {name}	소스 · {name}
+	Reset Effect	효과 초기화
+	Reset Parameter	매개변수 초기화
+	Save Preset…	프리셋 저장…
+	Custom Setup	사용자 지정 설정
+	Edit…	편집…
+	Show graphs	그래프 표시
+	Toggle animation	애니메이션 전환
+	Eyedropper (pick a color from the Program monitor)	스포이트 (프로그램 모니터에서 색상 선택)
+	Eyedropper: no picture to sample	스포이트: 색상을 추출할 이미지 없음
+	Add/Remove Keyframe	키프레임 추가/제거
+	Temporal Interpolation	시간 보간
+	Linear	선형
+	Bezier	베지어
+	Auto Bezier	자동 베지어
+	Continuous Bezier	연속 베지어
+	Ease In	서서히 시작
+	Ease Out	서서히 종료
+	Select a clip to grade	색상을 보정할 클립을 선택하세요
+	Select a clip to see its properties	속성을 보려면 클립을 선택하세요
+	Anchor point	기준점
+	Rotation	회전
+	Level	레벨
+	Speed {n}%	속도 {n}%
+	Value	값
+	Velocity	변화 속도
+	Default	기본값
+	Custom ({n} points)	사용자 지정 (점 {n}개)
+	Select a graphic clip, or use the Type tool (T) on the Program monitor	그래픽 클립을 선택하거나 프로그램 모니터에서 문자 도구 (T)를 사용하세요
+	Create new graphic	새 그래픽 만들기
+	New Text Layer	새 텍스트 레이어
+	New Text	새 텍스트
+	New Rectangle	새 직사각형
+	New Ellipse	새 타원
+	Delete Layer	레이어 삭제
+	Select a layer to edit its properties.	속성을 편집할 레이어를 선택하세요.
+	Align Left	왼쪽 정렬
+	Align Center Horizontally	가로 가운데 정렬
+	Align Right	오른쪽 정렬
+	Align Top	위쪽 정렬
+	Align Center Vertically	세로 가운데 정렬
+	Align Bottom	아래쪽 정렬
+	Font	글꼴
+	Font Style	글꼴 스타일
+	Font Size	글꼴 크기
+	Alignment	정렬
+	Left Align Text	텍스트 왼쪽 정렬
+	Center Align Text	텍스트 가운데 정렬
+	Right Align Text	텍스트 오른쪽 정렬
+	Justify	양쪽 정렬
+	Tracking	자간
+	Leading	행간
+	Baseline Shift	기준선 이동
+	Text Box Width	텍스트 상자 너비
+	Style	스타일
+	Faux Bold	가상 굵게
+	Faux Italic	가상 기울임
+	All Caps	모두 대문자
+	Small Caps	작은 대문자
+	Underline	밑줄
+	OpenType	OpenType
+	Kerning	커닝
+	Shape	도형
+	Size	크기
+	Corner Radius	모서리 반경
+	Polygon Sides	다각형 변 수
+	Fill	채우기
+	Stroke	외곽선
+	Stroke 2	외곽선 2
+	Background	배경
+	   Opacity	   불투명도
+	   Size	   크기
+	   Corner Radius	   모서리 반경
+	Shadow	그림자
+	   Angle	   각도
+	   Distance	   거리
+	   Blur	   흐림
+	Search templates	템플릿 검색
+	All Categories	모든 범주
+	Install…	설치…
+	Install Motion Graphics Template (.fcgt)	모션 그래픽 템플릿 설치 (.fcgt)
+	No templates match.	일치하는 템플릿이 없습니다.
+	{category} · My Template	{category} · 내 템플릿
+	Apply	적용
+	Remove	제거
+	{n} editable properties	편집 가능한 속성 {n}개
+	   Template: {name}	   템플릿: {name}
+	Intro Duration	시작 길이
+	Outro Duration	종료 길이
+	Roll	롤
+	Start Off Screen	화면 밖에서 시작
+	End Off Screen	화면 밖에서 종료
+	Video Frame	비디오 프레임
+	Pin To	고정 대상
+	Pinned Edges	고정된 가장자리
+	FilmCraft Graphics Template	FilmCraft 그래픽 템플릿
+	{n} Font	{n} 글꼴
+	{n} Size	{n} 크기
+	{n} Color	{n} 색상
+	{n} Position	{n} 위치
+	Show {n}	{n} 표시
+	My Templates	내 템플릿
+	Export As Motion Graphics Template	모션 그래픽 템플릿으로 내보내기
+	Category:	범주:
+	Editable properties:	편집 가능한 속성:
+	Saved as a FilmCraft graphics template (.fcgt) in your templates folder.	템플릿 폴더에 FilmCraft 그래픽 템플릿 (.fcgt)으로 저장했습니다.
+	Exported graphics template to {path}	{path}에 그래픽 템플릿을 내보냈습니다
+	Replace Fonts in Projects	프로젝트의 글꼴 바꾸기
+	Fonts used in the project:	프로젝트에서 사용한 글꼴:
+	{f} (missing)	{f} (없음)
+	Replace:	바꿀 글꼴:
+	Replaced {n} font uses	글꼴 사용 {n}곳을 바꿨습니다
+	Show/Hide Effects and Sends	효과 및 센드 표시/숨기기
+	Audio Track Mixer menu	오디오 트랙 믹서 메뉴
+	Show/Hide Tracks…	트랙 표시/숨기기…
+	Meter Input(s) Only	입력 미터만 표시
+	Show/Hide Tracks	트랙 표시/숨기기
+	Show All	모두 표시
+	Post-Fader	페이더 후
+	Remove Effect	효과 제거
+	Fill the slots above first	위쪽 슬롯부터 채우세요
+	pre 	전단·
+	Pre-Fader	페이더 전
+	Mute Send	센드 음소거
+	Remove Send	센드 제거
+	New Submix	새 서브믹스
+	Pan / balance (drag; double-click: centre)	팬 / 밸런스 (드래그, 두 번 클릭: 중앙)
+	Solo safe	솔로 제외
+	Enable track for recording	트랙 녹음 활성화
+	Volume (drag; double-click: 0 dB)	볼륨 (드래그, 두 번 클릭: 0 dB)
+	5.1 panner (drag the puck; double-click: front centre)	5.1 패너 (퍽 드래그, 두 번 클릭: 전면 중앙)
+	Center	중앙
+	Go to In Point	시작점으로 이동
+	Go to Out Point	종료점으로 이동
+	Play In to Out	시작점부터 종료점까지 재생
+	Record (voice-over on the record-enabled track)	녹음 (녹음이 활성화된 트랙에 보이스오버)
+	Write keyframes	키프레임 기록
+	Something went wrong while drawing the window. Your project is still open; save it to be safe.	화면을 그리는 중 문제가 발생했습니다. 프로젝트는 열려 있으니 저장하세요.
+	Continue	계속
+	Go Back	뒤로
+	Go Forward	앞으로
+	Up One Level	상위 폴더로
+	File Types Displayed	표시할 파일 유형
+	List View	목록 보기
+	Thumbnail View	썸네일 보기
+	Ingest	수집
+	Open Ingest Settings	수집 설정 열기
+	Import as Image Sequence	이미지 시퀀스로 가져오기
+	{sel} of {total} items selected	{total}개 중 {sel}개 선택됨
+	{total} items	항목 {total}개
+	Cannot open {dir}: {e}	{dir}을(를) 열 수 없습니다: {e}
+	Favorites	즐겨찾기
+	Local Drives	로컬 드라이브
+	Network	네트워크
+	Recent Directories	최근 폴더
+	  (none)	  (없음)
+	Remove from Favorites	즐겨찾기에서 제거
+	Add to Favorites	즐겨찾기에 추가
+	Clear Recent Directories	최근 폴더 지우기
+	Open In Source Monitor	소스 모니터에서 열기
+	Reveal in Finder	Finder에서 보기
+	Edit Columns…	열 편집…
+	Hover Scrub	마우스 올리기로 스크러빙
+	New Media Browser Panel	새 미디어 브라우저 패널
+	Create Folder For Imported Projects	가져온 프로젝트의 폴더 생성
+	Allow Duplicate Media During Project Import	프로젝트 가져오기 시 중복 미디어 허용
+	out	종료
+	in	시작
+	Show	표시
+	Sort	정렬
+	Reverse the order	순서 반전
+	Grab bag	무작위
+	Table	표
+	No contributor data was built into this copy.	이 빌드에 기여자 정보가 포함되지 않았습니다.
+	No model credits were built into this copy.	이 빌드에 모델 기여 정보가 포함되지 않았습니다.
+	Company	회사
+	Model	모델
+	Version	버전
+	Commits	커밋
+	% of all commits	전체 커밋 비율 (%)
+	Lines +/−	추가/삭제 줄 수
+	Audio output failed: playing without sound (check Settings ▸ Audio Hardware)	오디오 출력 실패: 소리 없이 재생합니다 (설정 ▸ 오디오 하드웨어 확인)
+	Audio output is not responding: playing without sound (check Settings ▸ Audio Hardware)	오디오 출력이 응답하지 않습니다. 소리 없이 재생합니다 (설정 ▸ 오디오 하드웨어 확인)
+	Clip Speed / Duration	클립 속도 / 길이
+	Speed:	속도:
+	Reverse Speed	역방향 재생
+	Ripple Edit, Shifting Trailing Clips	리플 편집으로 뒤쪽 클립 이동
+	About	정보
+	Contributors	기여자
+	Models	모델
+	Encoder	인코더
+	Text Properties	텍스트 속성
+	Text Box Height	텍스트 상자 높이
+	Paragraph Text	문단 텍스트
+	Point Text	포인트 텍스트
+	Text Layer Type	텍스트 레이어 유형
+	Text Styling	텍스트 스타일
+	New Color Matte	새 단색 매트
+	Color Matte Color	단색 매트 색상
+	Color:	색상:
+	 · {time} left	 · {time} 남음
+	Discard take	녹음 테이크 버리기
+	Voice-over take discarded	보이스오버 테이크를 버렸습니다
+	Deselect All Project Items	모든 프로젝트 항목 선택 해제
+	Display name	표시 이름
+	Name (A–Z)	이름 (A–Z)
+	Real name	실명
+	Select All Project Items	모든 프로젝트 항목 선택
+	Username	사용자 이름
+	Vertical Type Tool	세로 문자 도구
+	Go to previous keyframe	이전 키프레임으로 이동
+	Go to next keyframe	다음 키프레임으로 이동
+	Add keyframe	키프레임 추가
+	Remove keyframe	키프레임 제거
+	Turn on animation and add keyframe	애니메이션 활성화 및 키프레임 추가
+	Click to select, or click in empty space and drag to marquee select. Use Shift, Alt, and Ctrl for other options.	클릭하여 선택하거나 빈 공간에서 드래그하여 영역 선택하세요. Shift, Alt 및 Ctrl로 추가 옵션을 사용하세요.
+	Click to zoom in; Alt-click to zoom out.	클릭하면 확대하고 Alt 클릭하면 축소합니다.
+	Drag: move · Alt-click: smooth/corner · Ctrl-click: delete	드래그: 이동 · Alt 클릭: 곡선/모서리 · Ctrl 클릭: 삭제
+	Drag inward to round the corners	안쪽으로 드래그하여 모서리를 둥글게 만드세요
+	Include Alpha Channel	알파 채널 포함
+	Sequence Settings	시퀀스 설정
+	Color Management	색상 관리
+	VR Properties	VR 속성
+	Editing Mode:	편집 모드:
+	Timebase:	시간 기준:
+	Frame Size:	프레임 크기:
+	Pixel Aspect Ratio:	픽셀 종횡비:
+	Fields:	필드:
+	Channel Format:	채널 형식:
+	Number of Channels:	채널 수:
+	Preview File Format:	미리보기 파일 형식:
+	Working Color Space:	작업 색 공간:
+	Projection:	투영:
+	Layout:	레이아웃:
+	Captured View:	캡처된 보기:
+	Video Previews	비디오 미리보기
+	No Fields (Progressive Scan)	필드 없음 (프로그레시브 스캔)
+	Custom ({ratio})	사용자 지정 ({ratio})
+	{rate} frames/second	초당 {rate}프레임
+	{rate} fps Drop-Frame Timecode	{rate} fps 드롭 프레임 타임코드
+	{rate} fps Non Drop-Frame Timecode	{rate} fps 논드롭 프레임 타임코드
+	{rate} fps Timecode	{rate} fps 타임코드
+	horizontal	가로
+	vertical	세로
+	Scale motion effects proportionally when changing frame size	프레임 크기를 바꿀 때 모션 효과를 비례하여 조정
+	Maximum Bit Depth	최대 비트 심도
+	Maximum Render Quality	최대 렌더링 품질
+	Composite in Linear Color	선형 색상으로 합성
+	Auto Tone Map Media (HDR and log into SDR)	미디어 자동 톤 매핑 (HDR 및 로그를 SDR로 변환)
+	Configure…	구성…
+	Not supported in FilmCraft yet	FilmCraft에서 아직 지원하지 않습니다
+	FilmCraft always composites in linear light	FilmCraft는 항상 선형 광으로 합성합니다
+	Loop marked range	표시한 구간 반복
+	Play Source	소스 재생
+	Source Play/Stop	소스 재생/정지
+	Stop Source	소스 정지
+	New Sequence	새 시퀀스
+	Tracks	트랙
+	tracks	트랙
+	Clear Transition	전환 지우기
+	Set Transition Duration	전환 길이 설정
+	Active	활성
+	In	시작
+	Out	종료
+	Export Markers as CSV…	마커를 CSV로 내보내기…
+	Fill Type	채우기 유형
+	Gradient Angle	그라데이션 각도
+	Linear Gradient	선형 그라데이션
+	Solid	단색
+	GPU Rendering	GPU 렌더링
+	Composite on the GPU when available	사용 가능한 경우 GPU로 합성
+	Text to Speech	텍스트 음성 변환
+	Edit Narration	내레이션 편집
+	Dock Panel	패널 도킹
+	Undock Panel	패널 도킹 해제
+	Docking Action	도킹 동작
+	Resize floating panel	떠 있는 패널 크기 조정
+	Get Project Notes	프로젝트 메모 가져오기
+	Edit Project Notes	프로젝트 메모 편집
+	Notes for this project: to-dos, instructions, frame numbers… Saved with the project.	프로젝트 메모: 할 일, 작업 지침, 프레임 번호… 프로젝트와 함께 저장됩니다.
+	Use Effect Shutter Angle	효과 셔터 각도 사용
+	Compression	압축
+	Safe graphics mode: {mode}	안전 그래픽 모드: {mode}
+	An earlier start failed with the default graphics. Updating the graphics driver usually fixes this.	이전 실행에서 기본 그래픽으로 시작하지 못했습니다. 그래픽 드라이버를 업데이트하면 해결될 수 있습니다.
+	Use Default Graphics	기본 그래픽 사용
+	The default graphics are used from the next start.	다음 실행부터 기본 그래픽을 사용합니다.
+	DirectX 12 only	DirectX 12만
+	software rendering	소프트웨어 렌더링
+	Label Color Presets	레이블 색상 프리셋
+	{name} (Modified)	{name} (수정됨)
+	Revert to the preset's colors and names	프리셋의 색상과 이름으로 되돌리기
+	Import a preset file…	프리셋 파일 가져오기…
+	Export the labels to a preset file…	레이블을 프리셋 파일로 내보내기…
+	Show the presets folder	프리셋 폴더 표시
+	Delete this preset	이 프리셋 삭제
+	Refresh Changed Media	변경된 미디어 새로고침
+	Medium	중간
+	Home	홈
+	Import	가져오기
+	Basic Correction	기본 보정
+	Creative	크리에이티브
+	Curves	곡선
+	Color Wheels & Match	색상 휠 및 일치
+	HSL Secondary	HSL 보조
+	Vignette	비네트
+	Layers	레이어
+	Template Properties	템플릿 속성
+	Responsive Design - Time	반응형 디자인 - 시간
+	Responsive Design - Position	반응형 디자인 - 위치
+	Align and Transform	정렬 및 변형
+	No export preset named `{name}`	`{name}` 내보내기 프리셋이 없습니다
+	Open a sequence to export	내보내려면 시퀀스를 여세요
+	Destinations	대상 위치
+	Media File	미디어 파일
+	Queue ({n})	대기열 ({n})
+	Send exports here with Send to Queue, then start the queue.	대기열로 보내기를 사용하여 내보내기 작업을 추가한 후 대기열을 시작하세요.
+	Ready	준비됨
+	Encoding {n}%	인코딩 {n}%
+	Start Queue	대기열 시작
+	Stop	정지
+	Clear Finished	완료된 항목 지우기
+	Not supported by FilmCraft's encoders yet	FilmCraft 인코더에서 아직 지원하지 않습니다
+	Sequence name	시퀀스 이름
+	Folder	폴더
+	Preset	프리셋
+	More presets…	추가 프리셋…
+	Format	형식
+	Multiplexer	멀티플렉서
+	The sequence has no caption track.	시퀀스에 자막 트랙이 없습니다.
+	Export Options	내보내기 옵션
+	Burn Captions Into Video	비디오에 자막 입히기
+	Create Sidecar File	별도 자막 파일 만들기
+	File Format	파일 형식
+	SubRip Subtitle (.srt)	SubRip 자막 (.srt)
+	WebVTT (.vtt)	WebVTT (.vtt)
+	Title	제목
+	Creator	제작자
+	Copyright	저작권
+	Description	설명
+	Comment	메모
+	Image	이미지
+	Frame Size	프레임 크기
+	Match Source	소스에 맞추기
+	Frame Rate	프레임 레이트
+	Field Order	필드 순서
+	Aspect	종횡비
+	Custom	사용자 지정
+	Video Codec	비디오 코덱
+	Profile	프로파일
+	Main (8-bit)	Main (8비트)
+	Hardware (AV1 has no software encoder)	하드웨어 (AV1 소프트웨어 인코더 없음)
+	Main 10 (10-bit, HDR)	Main 10 (10비트, HDR)
+	Main (8-bit; Main 10 for HDR sequences)	Main (8비트, HDR 시퀀스는 Main 10)
+	Hardware (H.265 has no software encoder)	하드웨어 (H.265 소프트웨어 인코더 없음)
+	Bitrate Encoding	비트레이트 인코딩
+	Quality (CRF)	품질 (CRF)
+	Target Bitrate	목표 비트레이트
+	Adaptive ({bpp} bits per pixel)	적응형 (픽셀당 {bpp}비트)
+	Set	설정
+	Maximum Bitrate	최대 비트레이트
+	Key Frame Distance	키프레임 간격
+	ZIP (1 scan line)	ZIP (스캔라인 1개)
+	ZIP (16 scan lines)	ZIP (스캔라인 16개)
+	Quality	품질
+	Render at Maximum Depth	최대 심도로 렌더링
+	Use Maximum Render Quality	최대 렌더링 품질 사용
+	Export Audio	오디오 내보내기
+	Audio Format	오디오 형식
+	FLAC (lossless)	FLAC (무손실)
+	Uncompressed (PCM)	비압축 (PCM)
+	Match Source ({seq_sr} Hz)	소스에 맞추기 ({seq_sr} Hz)
+	Channels	채널
+	Audio Bitrate	오디오 비트레이트
+	Sample Size	샘플 크기
+	16 bit	16비트
+	24 bit	24비트
+	Compression Level	압축 수준
+	0 fastest, 8 smallest	0 가장 빠름, 8 가장 작음
+	Size / Opacity	크기 / 불투명도
+	Image Overlay	이미지 오버레이
+	PNG or JPEG file	PNG 또는 JPEG 파일
+	Name Overlay	이름 오버레이
+	Name	이름
+	Timecode Overlay	타임코드 오버레이
+	Prefix	접두어
+	Video Limiter	비디오 리미터
+	Luma Min / Max	휘도 최솟값 / 최댓값
+	Loudness Normalization	음량 정규화
+	Target Loudness	목표 음량
+	True Peak Limit	트루 피크 한도
+	Audio only	오디오만
+	Range	범위
+	Scaling	크기 조정
+	Scale To Fit	크기에 맞추기
+	Scale To Fill	채우도록 크기 조정
+	Stretch To Fill	늘려서 채우기
+	Summary	요약
+	Sequence, {w}x{h}, {fps} fps, {rate} Hz	시퀀스, {w}x{h}, {fps} fps, {rate} Hz
+	Estimated file size: {size}	예상 파일 크기: {size}
+	Send to Queue	대기열로 보내기
+	Exporting {path}	{path} 내보내는 중
+	Added to the export queue	내보내기 대기열에 추가했습니다
+	Preset Manager	프리셋 관리자
+	Search presets	프리셋 검색
+	Favorites only	즐겨찾기만
+	Show in the Preset menu	프리셋 메뉴에 표시
+	User	사용자
+	Save current settings as:	현재 설정을 다음 이름으로 저장:
+	Export…	내보내기…
+	Export presets	프리셋 내보내기
+	Import: no file chosen (agents: export.presets.import {path})	가져오기: 파일을 선택하지 않았습니다 (에이전트: export.presets.import {path})
+	Export: no file chosen (agents: export.presets.export {path, names})	내보내기: 파일을 선택하지 않았습니다 (에이전트: export.presets.export {path, names})
+	Quick Export: open a sequence first	빠른 내보내기: 먼저 시퀀스를 여세요
+	File Name & Location	파일 이름 및 위치
+	Quick Export: {path}	빠른 내보내기: {path}
+	Project: {name}	프로젝트: {name}
+	Bin: {name}	보관함: {name}
+	Up one level	상위 폴더로
+	Select an item to preview it	미리 볼 항목을 선택하세요
+	Video Usage: {vu}  Audio Usage: {au}	비디오 사용: {vu}  오디오 사용: {au}
+	Icon View	아이콘 보기
+	Freeform View	자유 배치 보기
+	Sort Icons	아이콘 정렬
+	Clear (Delete)	지우기 (Delete)
+	New Item	새 항목
+	New Bin	새 보관함
+	Find	찾기
+	Automate to Sequence	시퀀스에 자동 배치
+	Select items to clear	지울 항목을 선택하세요
+	User Order	사용자 지정 순서
+	Descending	내림차순
+	Refresh Project	프로젝트 새로고침
+	Reveal Project in Finder…	Finder에서 프로젝트 보기…
+	New Bin From Selection	선택 항목으로 새 보관함 만들기
+	New Search Bin	새 검색 보관함
+	New Project Shortcut	새 프로젝트 바로가기
+	List	목록
+	Icon	아이콘
+	Freeform	자유 배치
+	Preview Area	미리보기 영역
+	Thumbnails	썸네일
+	Thumbnails show effects applied	썸네일에 적용된 효과 표시
+	Thumbnail controls for all pointing devices	모든 포인팅 장치에 썸네일 컨트롤 표시
+	Refresh Sort Order	정렬 순서 새로고침
+	Metadata Display…	메타데이터 표시…
+	Save Current View Preset	현재 보기 프리셋 저장
+	Restore View Preset	보기 프리셋 복원
+	Project View Preset {n}	프로젝트 보기 프리셋 {n}
+	Freeform View Options…	자유 배치 보기 옵션…
+	Drop media here to create sequence.	여기에 미디어를 놓아 시퀀스를 만드세요.
+	Double-click a sequence in the Project panel to open it here.	프로젝트 패널에서 시퀀스를 두 번 클릭하여 여세요.
+	Open Demo Project	데모 프로젝트 열기
+	Insert and overwrite sequences as nests or individual clips	시퀀스를 중첩 또는 개별 클립으로 삽입 및 덮어쓰기
+	Snap in Timeline (S)	타임라인에서 스냅 (S)
+	Caption track options	자막 트랙 옵션
+	Timeline Display Settings	타임라인 표시 설정
+	Show Video Thumbnails	비디오 썸네일 표시
+	Head	시작 프레임
+	Head and Tail	시작 및 끝 프레임
+	Continuous	연속
+	Show Audio Waveform	오디오 파형 표시
+	Expand All Tracks	모든 트랙 펼치기
+	Minimize All Tracks	모든 트랙 최소화
+	Unrendered: should play back in real time	렌더링되지 않음: 실시간 재생 가능
+	Unrendered: render to play back in real time	렌더링되지 않음: 실시간 재생하려면 렌더링 필요
+	Rendered preview	렌더링된 미리보기
+	Join Through Edits	연속 프레임 편집점 연결
+	✓ Enable	✓ 활성화
+	Unlink	연결 해제
+	1 file	파일 1개
+	{n} files	파일 {n}개
+	29.97 fps Drop-Frame	29.97 fps 드롭 프레임
+	29.97 fps Non Drop-Frame	29.97 fps 논드롭 프레임
+	59.94 fps Drop-Frame	59.94 fps 드롭 프레임
+	59.94 fps Non Drop-Frame	59.94 fps 논드롭 프레임
